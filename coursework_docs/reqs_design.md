@@ -2,8 +2,11 @@
 Version 1.0
 # Authors
 Chase Warrington <!-- spacechase0 -->
+
 Amanda Lovett <!-- arin -->
+
 <!-- Danger Duchess -->
+
 <!-- HollenStarr -->
 
 # Overview
