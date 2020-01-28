@@ -1,8 +1,9 @@
-# Software Requirements and Design Document For Group <X>
+# Software Implementation and Testing For Group <X>
 Version 1.0
 # Authors
 Chase Warrington <!-- spacechase0 -->
-<!-- arin -->
+
+Amanda Lovett<!-- arin -->
 <!-- Danger Duchess -->
 <!-- HollenStarr -->
 
