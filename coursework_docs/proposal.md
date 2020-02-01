@@ -36,9 +36,10 @@ We plan on using the [Godot engine](https://godotengine.org/).
 
 # Team members, expertise, project responsibilities, and team organization
 <!-- List the team members, their FSU IDs, and each member’s expertise, such as the programming languages, databases, mobile programming, platforms, APIs, etc. each is comfortable with. Mention who will do what during the project. Mention also how your team will be organized (e.g., will you have a manager in charge of delegating tasks or will you decide together based on interests/skills?), what will be your communication like (will you use Slack, Canvas or something similar to communicate? How often will you meet in person?), etc. -->
+Everyone will be programming various areas.
 * Chase Warrington - caw15d - Purely code
-* Amanda Lovett - all17 - Art
-* Carissa Garde - cmg17d - Music
-* Megan Primavera - mlp16c - Story / QA
+* Amanda Lovett - all17 - Also art
+* Carissa Garde - cmg17d - Also music
+* Megan Primavera - mlp16c - Also story
 
 Communicating over Discord. Meeting tentatively every week.
