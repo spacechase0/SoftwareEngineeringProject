@@ -38,7 +38,7 @@ This is also a 2D platformer about a water droplet, however there will be some d
 
 # Third-party libraries / APIs to be used
 <!-- Please mention any external Web service, library, database, web server, web container, application server, specialized hardware, etc. that you plan to use in your project, to the best of your abilities. -->
-We plan on using the [Godot engine](https://godotengine.org/). Currently, this is the only external service that we intend on using to create our project, though this is subject to change.
+We plan on using the [Godot engine](https://godotengine.org/). Currently, this is the only external service that we intend on using to create our project, code-wise.  [Sibelius](https://www.avid.com/sibelius), a music notation software by Avid, will be used to create the original score for the game.
 
 # Team members, expertise, project responsibilities, and team organization
 <!-- List the team members, their FSU IDs, and each member’s expertise, such as the programming languages, databases, mobile programming, platforms, APIs, etc. each is comfortable with. Mention who will do what during the project. Mention also how your team will be organized (e.g., will you have a manager in charge of delegating tasks or will you decide together based on interests/skills?), what will be your communication like (will you use Slack, Canvas or something similar to communicate? How often will you meet in person?), etc. -->
