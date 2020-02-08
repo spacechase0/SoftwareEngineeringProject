@@ -30,7 +30,7 @@ Our primary concern with the development of this project is our lack of experien
 Considering that this game is a platformer, it is only natural to compare it to other games in that genre. For example, some core mechanics of platformers (such as jumping on/shooting enemies to defeat them, or using basic puzzle solving skills to find ways to complete the level) will be maintained in this game. Many other, if not all platformers, share these mechanics (ex. Mario).
 
 After searching, we found [Drop Alive](https://store.steampowered.com/app/513450/Drop_Alive/).
-This is also a 2D platformer about a water droplet, however there will be some distinct differences between Drop Alive and H2GO. Drop Alive's main storyline focuses on a lone water drop inside a house that wants to get to the ocean, while H2G0 involves traversal through various nature-esque scenes, interaction with other characters, and branching story routes.  
+This is also a 2D platformer about a water droplet, however there will be some distinct differences between Drop Alive and H2GO. Drop Alive's main storyline focuses on a lone water drop inside a house that wants to get to the ocean, while H2GO involves traversal through various nature-esque scenes, interaction with other characters, and branching story routes.  
 
 # Intended platform / programming language
 <!-- (e.g., iOS, Android, Web, Python, C++, Java, JavaScript, etc.) -->
