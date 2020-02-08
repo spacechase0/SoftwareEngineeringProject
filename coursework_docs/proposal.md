@@ -46,6 +46,6 @@ Everyone will be programming various areas.
 * Chase Warrington - caw15d - Purely code
 * Amanda Lovett - all17 - Also art
 * Carissa Garde - cmg17d - Also music
-* Megan Primavera - mlp16c - Also story
+* Megan Primavera - mlp16c - Also story, QA experience in the gaming industry
 
 Quick, more casual communication will be done through Discord. Plans have been made to meet up every Saturday at 3pm, location varies by the week. If any of our group members has an issue meeting at the allotted time, we have agreed to discuss over Discord either a) an alternate meetup date/time or b) continuing our meeting as scheduled while the missing person takes on the work to be done at said meeting on their own accord.
