@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 10.0
+
+[sub_resource type="CapsuleShape2D" id=2]
+height = 10.0
+
+[sub_resource type="CircleShape2D" id=3]
+
+[sub_resource type="CapsuleMesh" id=4]
+radius = 10.0
+mid_height = 10.0
+
+[sub_resource type="CapsuleMesh" id=5]
+radius = 5.0
+
+[sub_resource type="CapsuleMesh" id=6]
+radius = 10.0
+
+[sub_resource type="PrismMesh" id=7]
+size = Vector3( 20, -20, 2 )
+
+[node name="Player" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource( 1 )
+
+[node name="Collision_Normal" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Collision_Crouch" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 7 )
+scale = Vector2( 1, 0.5 )
+shape = SubResource( 2 )
+disabled = true
+
+[node name="Collision_Vapor" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+disabled = true
+
+[node name="DisplayForms" type="Node2D" parent="."]
+
+[node name="Normal" type="Node2D" parent="DisplayForms"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="DisplayForms/Normal"]
+position = Vector2( 0, 5 )
+mesh = SubResource( 4 )
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="DisplayForms/Normal"]
+position = Vector2( 0, -10 )
+mesh = SubResource( 5 )
+
+[node name="Crouch" type="Node2D" parent="DisplayForms"]
+visible = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="DisplayForms/Crouch"]
+position = Vector2( 0, 8 )
+scale = Vector2( 1, 0.75 )
+mesh = SubResource( 6 )
+
+[node name="Vapor" type="Node2D" parent="DisplayForms"]
+visible = false
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="DisplayForms/Vapor"]
+position = Vector2( 0, -3 )
+mesh = SubResource( 7 )
