@@ -1,5 +1,5 @@
 # Characters
-##Key 
+## Key 
 *GN* = Gender Neutral, F = She/her, M = He/him
 Droppy- The Player, water droplet, GN
 Mr. Nimbus- Main Enemy, cloud, M
@@ -8,7 +8,7 @@ Twiggy- A member of the ground, a young twig, M
 Old Knotty- Elder tree in the ground, an old oak, M
 Gira- A lone member of the Golden Fields, a sunflower, F
 
-#Enemies
+# Enemies
 Cloud Levels- 
 Seagulls
 Tornados
