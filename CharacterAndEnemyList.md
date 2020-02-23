@@ -1,6 +1,7 @@
 # Characters
 ## Key 
 *GN* = Gender Neutral, F = She/her, M = He/him
+
 Droppy- The Player, water droplet, GN
 Mr. Nimbus- Main Enemy, cloud, M
 Zephyr, Zeph- Droppy's cloud kingdom friend, best buds, wind(?), M
