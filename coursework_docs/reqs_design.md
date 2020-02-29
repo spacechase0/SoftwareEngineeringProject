@@ -5,9 +5,9 @@ Chase Warrington <!-- spacechase0 -->
 
 Amanda Lovett <!-- arin -->
 
-<!-- Danger Duchess -->
+Megan Primavera <!-- Danger Duchess -->
 
-<!-- HollenStarr -->
+Carissa Garde <!-- HollenStarr -->
 
 # Overview
 <!-- 5 points -->
