@@ -50,8 +50,8 @@ func _physics_process(delta : float) -> void:
 		facingRight = true
 		hdir += 1
 	velocity.x = hdir * SPEED
-	$DroppyBody.flip_h = velocity.x < 0 #ac
-	$DroppyBody/Face.flip_h = velocity.x < 0 #ac
+	$DroppyBody.flip_h = !facingRight
+	$DroppyBody/Face.flip_h = !facingRight
 	
 	#amanda's code
 	if (velocity.length() > 0) && state == DropletState.NORMAL:
