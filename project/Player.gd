@@ -21,7 +21,7 @@ var shootCooldown : float = 0
 
 func _ready() -> void:
 	pass
-	
+
 func _physics_process(delta : float) -> void:
 	# Change between vapor and not
 	if Input.is_action_just_pressed("form_change"):
@@ -88,6 +88,12 @@ func _physics_process(delta : float) -> void:
 		# Shooting
 		if !crouching and Input.is_action_pressed("shoot") and shootCooldown <= 0:
 			shootCooldown = SHOOT_COOLDOWN
+			
+			#not currently working but for when shooting sound effect is added
+			#var shootEffect = get_tree().get_root().get_node("AudioStreamPlayer2D")
+			#var voiceID = shootEffect.play("bloop.wav")
+			#shootEffect.set_volume(voiceID, .1)
+			
 			var proj : Projectile = Projectile_scene.instance()
 			proj.velocity.x = PROJECTILE_SPEED
 			if !facingRight:
@@ -107,3 +113,4 @@ func _physics_process(delta : float) -> void:
 	
 	# Collision
 	velocity = move_and_slide_with_snap(velocity, Vector2(0, .01), Vector2(0, -1))
+	

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/AdventureTheme.ogg-564e110d07dd55f8a6ce1874c7ce7eb9.oggstr"
+
+[deps]
+
+source_file="res://AdventureTheme.ogg"
+dest_files=[ "res://.import/AdventureTheme.ogg-564e110d07dd55f8a6ce1874c7ce7eb9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

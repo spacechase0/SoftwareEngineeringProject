@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Relaxing sad melody.ogg-3bf390c5cd9742d33735ed1a3411873c.oggstr"
+
+[deps]
+
+source_file="res://Relaxing sad melody.ogg"
+dest_files=[ "res://.import/Relaxing sad melody.ogg-3bf390c5cd9742d33735ed1a3411873c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
