@@ -4,8 +4,11 @@
 Please do not change the font, font size, margins or line spacing. All the text in italic should be removed from your final submission.-->
 # 1)   Team Members
 Chase Warrington - caw15d - spacechase0
+
 Amanda Lovett - all17 - jethrall
+
 Megan Primavera - mlp16c -  danger-dutchess
+
 Carissa Garde - cmg17d - beesbuzzingby
 
 <!--Please write the name of all the team members, their FSU IDs, and GitHub IDs here.-->
