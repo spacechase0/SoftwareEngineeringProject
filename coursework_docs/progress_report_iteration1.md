@@ -36,11 +36,17 @@ b)   the requirements and design document, including the sections they wrote or 
 c)   the implementation and testing document, including the sections they wrote or contributed to
 d)   the source code (be detailed about which parts of the system each team member contributed to and how)
 e)   the video or presentation-->
+
 a) Progress Report: 
+
 b) Requirements and Design Document:
+
 c) Implementation and Testing Document:
+
 d) Source Code:
+
 e) Video: 
+
 
 # 6)   Plans for the next increment
 <!--If this report if for the first or second increment, describe what are you planning to achieve in the next increment.-->
