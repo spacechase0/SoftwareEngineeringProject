@@ -4,7 +4,9 @@ Version 1.0
 Chase Warrington <!-- spacechase0 -->
 
 Amanda Lovett<!-- arin -->
+
 Megan Primavera<!-- Danger Duchess -->
+
 Carissa Garde<!-- HollenStarr -->
 
 # Programming Languages
