@@ -33,7 +33,7 @@ Carissa Garde <!-- HollenStarr -->
 
 # Use Case Diagram
 <!-- 10 points -->
-
+ ![Usecase diagram](usecase_digram.png "Usecase diagram")
 <!-- This section presents the use case diagram and the textual descriptions of the use cases for the system under development. The use case diagram should contain all the use cases and relationships between them needed to describe the functionality to be developed. If you discover new use cases between two increments, update the diagram for your future increments.  -->
 <!-- Textual descriptions of use cases: For the first increment, the textual descriptions for the use cases are not required. However, the textual descriptions for all use cases discovered for your system are required for the second and third iterations. -->
 
