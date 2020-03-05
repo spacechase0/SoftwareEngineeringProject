@@ -7,7 +7,7 @@ Chase Warrington - caw15d - spacechase0
 
 Amanda Lovett - all17 - jethrall
 
-Megan Primavera - mlp16c -  danger-dutchess
+Megan Primavera - mlp16c -  danger-duchess
 
 Carissa Garde - cmg17d - beesbuzzingby
 
@@ -37,13 +37,13 @@ c)   the implementation and testing document, including the sections they wrote 
 d)   the source code (be detailed about which parts of the system each team member contributed to and how)
 e)   the video or presentation-->
 
-a) Progress Report: 
+a) Progress Report: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. 
 
-b) Requirements and Design Document:
+b) Requirements and Design Document: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. 
 
-c) Implementation and Testing Document:
+c) Implementation and Testing Document: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. Megan created the Use Case diagram via Creately but team members verbally came up with the use cases. Class Diagram was done by {insert team member name}
 
-d) Source Code:
+d) Source Code: Chase- Platform and Physics, Carissa- Audio Player, Amanda- Graphics and Animation, Megan- Dialog and Timed message
 
 e) Video: 
 
