@@ -3,12 +3,16 @@
 <!--Please use this template to describe your progress on the group project in the latest increment. 
 Please do not change the font, font size, margins or line spacing. All the text in italic should be removed from your final submission.-->
 # 1)   Team Members
+Chase Warrington - caw15d - spacechase0
 Amanda Lovett - all17 - jethrall
+Megan Primavera - mlp16c -  danger-dutchess
+Carissa Garde - cmg17d - beesbuzzingby
+
 <!--Please write the name of all the team members, their FSU IDs, and GitHub IDs here.-->
 
 # 2)   Project Title and Description
 <!--Briefly describe your project.-->
-H2GO is a 2D platforming game made for Windows. The game follows a water droplet called Droppy, who traverses through a variety of terrains in order to save his home.
+H2GO is a 2D platforming game made for Windows. The game follows a water droplet called Droppy, who traverses through a variety of terrains in order to save his home. In doing so, Droppy will gain powers, fights enemies, and be able to converse with an eclectic cast of characters. 
 
 # 3)  Accomplishments and overall project status during this increment
 <!--Describe in detail what was accomplished during this increment and where your project stands overall compared to the initial scope and functionality proposed.-->
@@ -31,7 +35,7 @@ d)   the source code (be detailed about which parts of the system each team memb
 e)   the video or presentation-->
 a) Progress Report: 
 b) Requirements and Design Document:
-c) Implenetation and Testing Document:
+c) Implementation and Testing Document:
 d) Source Code:
 e) Video: 
 
