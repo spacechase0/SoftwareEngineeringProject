@@ -53,22 +53,22 @@ func _physics_process(delta : float) -> void:
 	$DroppyBody.flip_h = !facingRight
 	$DroppyBody/Face.flip_h = !facingRight
 	
-	#amanda's code
+	# Walking animation
 	if (velocity.length() > 0) && state == DropletState.NORMAL:
 		$DroppyBody/Face.play("default")
 		$DroppyBody.play("walk")
 	else:
 		$DroppyBody.play("default")
-	#end amanda's code
 	
 	if shootCooldown > 0:
 		shootCooldown -= delta
 	
 	# State-specific
 	if state == DropletState.NORMAL:
-		if velocity.length() <= 0: #ac
-			$DroppyBody.play("default") #ac
-			$DroppyBody/Face.play("default") #ac
+		# Animation/visuals to be displayed for this form
+		if velocity.length() <= 0: 
+			$DroppyBody.play("default") 
+			$DroppyBody/Face.play("default") 
 		# Gravity, jumping
 		velocity.y += GRAVITY
 		if is_on_floor() and Input.is_action_just_pressed("move_up"):
@@ -76,9 +76,9 @@ func _physics_process(delta : float) -> void:
 		
 		# Crouching
 		var crouching : bool = Input.is_action_pressed("move_down")
-		if (crouching): #ac
-			$DroppyBody/Face.play("altcrouch") #ac
-			$DroppyBody.play("altcrouch") #ac
+		if (crouching): 
+			$DroppyBody/Face.play("altcrouch")
+			$DroppyBody.play("altcrouch") 
 			
 		($Collision_Normal as CollisionShape2D).disabled = crouching
 		($Collision_Crouch as CollisionShape2D).disabled = !crouching
@@ -101,8 +101,8 @@ func _physics_process(delta : float) -> void:
 			proj.global_position = self.global_position
 			get_parent().add_child(proj)
 	elif state == DropletState.VAPOR:
-		$DroppyBody/Face.play("default") #ac, should be changed to "vapor" face when i add that
-		$DroppyBody.play("vapor") #ac
+		$DroppyBody/Face.play("default") # To be changed to an appropriate "vapor" face if necessary
+		$DroppyBody.play("vapor") 
 		# Vertical movement
 		var vdir : float = 0.0
 		if Input.is_action_pressed("move_up"):
