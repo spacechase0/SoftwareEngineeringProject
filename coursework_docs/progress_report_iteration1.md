@@ -1,5 +1,5 @@
 
-# Progress Report || Increment 1 || Group #Y
+# Progress Report || Increment 1 || Group H2GO
 <!--Please use this template to describe your progress on the group project in the latest increment. 
 Please do not change the font, font size, margins or line spacing. All the text in italic should be removed from your final submission.-->
 # 1)   Team Members
@@ -43,14 +43,14 @@ b) Requirements and Design Document: Every team member contributed to the docume
 
 c) Implementation and Testing Document: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. Megan created the Use Case diagram via Creately but team members verbally came up with the use cases. Class Diagram was done by {insert team member name}
 
-d) Source Code: Chase- Platform and Physics, Carissa- Audio Player, Amanda- Graphics and Animation, Megan- Dialog and Timed message
+d) Source Code: Chase implemented code relating to the platforming and physics of the game, Carissa implmented the audio player, Amanda implemented code relating to graphics and animation, and Megan created the dialogue box and timed message system.
 
 e) Video: 
 
 
 # 6)   Plans for the next increment
 <!--If this report if for the first or second increment, describe what are you planning to achieve in the next increment.-->
-Level Design, Implementation of Interactive Characters (ie. NPC's, Enemies), Dialogue
+Upcoming plans include level design, implementation of interactive characters (ie. NPC's, Enemies), and dialogue.
 
 
 # 7)   Link to video
