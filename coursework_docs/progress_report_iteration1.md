@@ -3,12 +3,19 @@
 <!--Please use this template to describe your progress on the group project in the latest increment. 
 Please do not change the font, font size, margins or line spacing. All the text in italic should be removed from your final submission.-->
 # 1)   Team Members
+Chase Warrington - caw15d - spacechase0
+
 Amanda Lovett - all17 - jethrall
+
+Megan Primavera - mlp16c -  danger-duchess
+
+Carissa Garde - cmg17d - beesbuzzingby
+
 <!--Please write the name of all the team members, their FSU IDs, and GitHub IDs here.-->
 
 # 2)   Project Title and Description
 <!--Briefly describe your project.-->
-H2GO is a 2D platforming game made for Windows. The game follows a water droplet called Droppy, who traverses through a variety of terrains in order to save his home.
+H2GO is a 2D platforming game made for Windows. The game follows a water droplet called Droppy, who traverses through a variety of terrains in order to save his home. In doing so, Droppy will gain powers, fights enemies, and be able to converse with an eclectic cast of characters. 
 
 # 3)  Accomplishments and overall project status during this increment
 <!--Describe in detail what was accomplished during this increment and where your project stands overall compared to the initial scope and functionality proposed.-->
@@ -29,11 +36,17 @@ b)   the requirements and design document, including the sections they wrote or 
 c)   the implementation and testing document, including the sections they wrote or contributed to
 d)   the source code (be detailed about which parts of the system each team member contributed to and how)
 e)   the video or presentation-->
-a) Progress Report: 
-b) Requirements and Design Document:
-c) Implenetation and Testing Document:
-d) Source Code:
+
+a) Progress Report: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. 
+
+b) Requirements and Design Document: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. 
+
+c) Implementation and Testing Document: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. Megan created the Use Case diagram via Creately but team members verbally came up with the use cases. Class Diagram was done by {insert team member name}
+
+d) Source Code: Chase- Platform and Physics, Carissa- Audio Player, Amanda- Graphics and Animation, Megan- Dialog and Timed message
+
 e) Video: 
+
 
 # 6)   Plans for the next increment
 <!--If this report if for the first or second increment, describe what are you planning to achieve in the next increment.-->

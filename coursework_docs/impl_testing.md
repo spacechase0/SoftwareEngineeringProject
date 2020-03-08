@@ -4,7 +4,9 @@ Version 1.0
 Chase Warrington <!-- spacechase0 -->
 
 Amanda Lovett<!-- arin -->
+
 Megan Primavera<!-- Danger Duchess -->
+
 Carissa Garde<!-- HollenStarr -->
 
 # Programming Languages
@@ -14,10 +16,10 @@ GDScript - Godot's in-house scripting language, using due to ease of access and 
 
 # Platforms, APIs, Databases, and other technologies used
 <!-- 5 points -->
-Godot Engine - programming, implementation of all other elements into one software 
-Sibelius, Audacity - music and sound design
-Paint Tool SAI - artwork
-Github - writing/storyboarding 
+* Godot Engine - programming, implementation of all other elements into one software 
+* Sibelius, Audacity - music and sound design
+* Paint Tool SAI - artwork
+* Github - writing/storyboarding 
 <!-- List all the platforms, APIs, Databases, and any other technologies you use in your project and where you use them (in what components of your project). -->
 
 # Execution-based Functional Testing

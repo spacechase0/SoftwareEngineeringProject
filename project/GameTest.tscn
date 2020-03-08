@@ -41,13 +41,13 @@ mesh = SubResource( 2 )
 stream = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="DialogBox" type="Polygon2D" parent="AudioStreamPlayer"]
+[node name="DialogBox" type="Polygon2D" parent="."]
 position = Vector2( 35.8429, -33.507 )
 scale = Vector2( 1.00636, 0.97479 )
 color = Color( 0.168627, 0.152941, 0.152941, 1 )
 polygon = PoolVector2Array( 125.393, 382.417, 888.615, 379.911, 886.187, 480.179, 125.393, 478.508 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="AudioStreamPlayer/DialogBox"]
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
 margin_left = 142.619
 margin_top = 402.329
 margin_right = 877.619
@@ -58,7 +58,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="AudioStreamPlayer/DialogBox"]
+[node name="Timer" type="Timer" parent="DialogBox"]
 wait_time = 0.05
 autostart = true
-[connection signal="timeout" from="AudioStreamPlayer/DialogBox/Timer" to="AudioStreamPlayer/DialogBox/RichTextLabel" method="_on_Timer_timeout"]
+[connection signal="timeout" from="DialogBox/Timer" to="DialogBox/RichTextLabel" method="_on_Timer_timeout"]
