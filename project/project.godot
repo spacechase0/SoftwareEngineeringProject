@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="H2Go"
-run/main_scene="res://MainMenu.tscn"
+run/main_scene="res://GameTest.tscn"
 config/icon="res://icon.png"
 
 [input]
