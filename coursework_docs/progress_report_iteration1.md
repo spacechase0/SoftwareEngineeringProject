@@ -45,7 +45,7 @@ c) Implementation and Testing Document: Every team member contributed to the doc
 
 d) Source Code: Chase implemented code relating to the platforming and physics of the game, Carissa implmented the audio player, Amanda implemented code relating to graphics and animation, and Megan created the dialogue box and timed message system.
 
-e) Video: 
+e) Video: Megan did the voiceover for the video, and Amanda created and edited the video. Carissa's music and Chase's code are visible and notable during the presentation.
 
 
 # 6)   Plans for the next increment
@@ -55,3 +55,4 @@ Upcoming plans include level design, implementation of interactive characters (i
 
 # 7)   Link to video
 <!--Paste here the link to your video (only for increment 1 and 2).-->
+https://youtu.be/WNoEHQyMrDA
