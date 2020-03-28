@@ -1,0 +1,37 @@
+
+ZEPH: Droppy! Where are you off to?
+ZEPH: Huh? Mr. Nimbus’ place? All by yourself? That’s so cool! I wish I could go…Wait, do you even know how to get there? You know there’s tons of dangers along the way. You could evaporate or something.
+[ZEPH goes silent]
+ZEPH: Wait, I know! I’ll just remind you! Follow me.
+[DROPPY does not move]
+ZEPH: Uh, hey. Did you forget how to walk or something? Come on, you’re a droplet! Geez, I guess I have to remind you of that too. 
+ZEPH: You just use A and D! Duh. 
+[DROPPY moves until they reach a platform that ZEPH has jumped on]
+ZEPH: What are you still doing down there?
+ZEPH: What do you mean you don’t know how to get up here? Just use Space! You gotta remember how to jump!
+
+[DROPPY jumps until they reach a place where he must crouch]
+ZEPH: Well of course you can’t fit in here! You gotta duck! Do you remember how to do that?
+ZEPH: Yeah! That’s right use S!
+
+[Tutorial continues until they reach one cloud platform, camera pans to a sleeping seagull]
+
+ZEPH: Shh! Don’t move Droppy. 
+ZEPH: It’s our archnemesis. He’ll attack if we aren’t careful. 
+
+[The seagull snores]
+ZEPH: Wait, do you remember how to attack?
+ZEPH: Well go practice! 
+
+[DROPPY starts to move]
+ZEPH: WAIT BEFORE YOU GO!
+ZEPH: Remember that you could punch him…but you’d probably get hurt. You can try it with [insert move pls]. You should probably just…jump on him with space though.
+
+[DROPPY fights the Seagull]
+[Seagull is defeated]
+[DROPPY continues moving until they reach Mr. Nimbus’ house]
+ZEPH: You know I had my doubts but you’re still pretty good at all this!
+ZEPH: Well, I guess I should..let you go see Mr. Nimbus..without me.
+[ZEPH starts to walk away]
+ZEPH: Oh before I go, if you ever forget, you can just think about what we did! I think you just have to..hit [PAUSE COMMAND] but hey, I’m no sage. That’s probably why you’re here. 
+ZEPH: Well, have fun! See you later!
