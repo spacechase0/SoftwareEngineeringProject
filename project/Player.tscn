@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://walk1.png" type="Texture" id=2]
@@ -7,10 +7,12 @@
 [ext_resource path="res://walk4.png" type="Texture" id=5]
 [ext_resource path="res://droppyface.png" type="Texture" id=6]
 [ext_resource path="res://altcrouchface.png" type="Texture" id=7]
-[ext_resource path="res://altcrouch.png" type="Texture" id=8]
-[ext_resource path="res://crouchface.png" type="Texture" id=9]
-[ext_resource path="res://crouch.png" type="Texture" id=10]
-[ext_resource path="res://demovapor.png" type="Texture" id=11]
+[ext_resource path="res://crouch.png" type="Texture" id=8]
+[ext_resource path="res://crouch3.png" type="Texture" id=9]
+[ext_resource path="res://crouch2.png" type="Texture" id=10]
+[ext_resource path="res://vapor3.png" type="Texture" id=11]
+[ext_resource path="res://vapor1.png" type="Texture" id=12]
+[ext_resource path="res://vapor2.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -19,25 +21,25 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "crouchmove",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "altcrouch",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "vapor",
-"speed": 5.0
+"speed": 7.5
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -47,14 +49,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "altcrouch",
+"name": "crouch",
 "speed": 5.0
 } ]
 
@@ -89,11 +86,11 @@ script = ExtResource( 1 )
 [node name="DroppyBody" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 1 )
-animation = "vapor"
+animation = "crouch"
 
 [node name="Face" type="AnimatedSprite" parent="DroppyBody"]
 frames = SubResource( 2 )
-animation = "altcrouch"
+animation = "crouch"
 
 [node name="Collision_Normal" type="CollisionShape2D" parent="."]
 visible = false

@@ -53,10 +53,21 @@ func _physics_process(delta : float) -> void:
 	$DroppyBody.flip_h = !facingRight
 	$DroppyBody/Face.flip_h = !facingRight
 	
-	# Walking animation
+	#Introduce crouching prior to any movement calls
+	var crouching : bool = Input.is_action_pressed("move_down")
+	
+	# Walking and Crouching animation
 	if (velocity.length() > 0) && state == DropletState.NORMAL:
-		$DroppyBody/Face.play("default")
-		$DroppyBody.play("walk")
+		if (crouching):
+			$DroppyBody/Face.play("crouch")
+			$DroppyBody.play("crouchmove")
+		else: 
+			$DroppyBody/Face.play("default")
+			$DroppyBody.play("walk")
+			
+	elif (state == DropletState.VAPOR):
+		$DroppyBody.play("vapor")
+		
 	else:
 		$DroppyBody.play("default")
 	
@@ -64,21 +75,19 @@ func _physics_process(delta : float) -> void:
 		shootCooldown -= delta
 	
 	# State-specific
+	
 	if state == DropletState.NORMAL:
 		# Animation/visuals to be displayed for this form
 		if velocity.length() <= 0: 
 			$DroppyBody.play("default") 
 			$DroppyBody/Face.play("default") 
+			if (crouching):
+				$DroppyBody.play("crouch")
+				$DroppyBody/Face.play("crouch")
 		# Gravity, jumping
 		velocity.y += GRAVITY
 		if is_on_floor() and Input.is_action_just_pressed("move_up"):
 			velocity.y = -JUMP_FORCE
-		
-		# Crouching
-		var crouching : bool = Input.is_action_pressed("move_down")
-		if (crouching): 
-			$DroppyBody/Face.play("altcrouch")
-			$DroppyBody.play("altcrouch") 
 			
 		($Collision_Normal as CollisionShape2D).disabled = crouching
 		($Collision_Crouch as CollisionShape2D).disabled = !crouching
@@ -100,9 +109,9 @@ func _physics_process(delta : float) -> void:
 				proj.velocity.x = -proj.velocity.x
 			proj.global_position = self.global_position
 			get_parent().add_child(proj)
+			
 	elif state == DropletState.VAPOR:
-		$DroppyBody/Face.play("default") # To be changed to an appropriate "vapor" face if necessary
-		$DroppyBody.play("vapor") 
+		 
 		# Vertical movement
 		var vdir : float = 0.0
 		if Input.is_action_pressed("move_up"):
@@ -110,6 +119,7 @@ func _physics_process(delta : float) -> void:
 		elif Input.is_action_pressed("move_down"):
 			vdir += 1
 		velocity.y = vdir * SPEED
+	
 	
 	# Collision
 	velocity = move_and_slide_with_snap(velocity, Vector2(0, .01), Vector2(0, -1))

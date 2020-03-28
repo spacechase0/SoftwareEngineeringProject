@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/altcrouch.png-af777ce74f14873586ab9e8ed4ae279e.stex"
+path="res://.import/vapor3.png-9abd37e880d60a3ed2f380a0974915a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://altcrouch.png"
-dest_files=[ "res://.import/altcrouch.png-af777ce74f14873586ab9e8ed4ae279e.stex" ]
+source_file="res://vapor3.png"
+dest_files=[ "res://.import/vapor3.png-9abd37e880d60a3ed2f380a0974915a3.stex" ]
 
 [params]
 
