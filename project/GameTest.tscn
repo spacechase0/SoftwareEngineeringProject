@@ -5,7 +5,7 @@
 [ext_resource path="res://AdventureTheme.tres" type="AudioStream" id=3]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=4]
 [ext_resource path="res://AudioStreamPlayer2D.gd" type="Script" id=5]
-[ext_resource path="res://DialogueBox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://DialogTrigger.tscn" type="PackedScene" id=6]
 [ext_resource path="res://cloudlayer.png" type="Texture" id=7]
 [ext_resource path="res://bg2.png" type="Texture" id=8]
 
@@ -34,7 +34,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 4096, 728 )
 
 [node name="cloudlayer" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -802.274, 189.857 )
+position = Vector2( -802.274, 186.508 )
 rotation = -3.14159
 scale = Vector2( 3.58738, -1.02477 )
 texture = ExtResource( 7 )
@@ -44,7 +44,7 @@ offset = Vector2( 0, 50 )
 script = ExtResource( 5 )
 
 [node name="Player" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 495, 207 )
+position = Vector2( 400.818, 189.927 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 483.093, 261.294 )
@@ -66,12 +66,24 @@ mesh = SubResource( 2 )
 stream = ExtResource( 3 )
 script = ExtResource( 4 )
 
+[node name="DialogTrigger" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( 482.682, 232.155 )
+Entries = PoolStringArray( "You got halfway through the platform!" )
+
+[node name="DialogTrigger2" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( 582.893, 225.474 )
+Entries = PoolStringArray( "Don\'t walk off!" )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource( 6 )]
+[node name="DialogContainer" type="MarginContainer" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
+anchor_bottom = 1.0
 margin_left = -250.0
 margin_top = -150.0
 margin_right = 250.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

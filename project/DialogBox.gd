@@ -16,12 +16,13 @@ func _ready():
 func _input(event):
 	if event is InputEventKey:
 		if event.is_action("advance") && event.pressed:
-			print("meow")
 			if get_visible_characters() > get_total_character_count():
 				if page < dialog.size()-1:
 					page += 1
 					set_bbcode(dialog[page])
 					set_visible_characters(0)
+				else:
+					get_parent().queue_free()
 			else:
 				set_visible_characters(get_total_character_count())
 
