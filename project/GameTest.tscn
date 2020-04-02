@@ -26,7 +26,7 @@ scroll_offset = Vector2( 1000, 0 )
 scale = Vector2( -0.621486, 0.997517 )
 
 [node name="bg2" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -793.172, 212.541 )
+position = Vector2( -793.172, 216.551 )
 rotation = -3.14159
 scale = Vector2( 1.60905, -1.00249 )
 texture = ExtResource( 8 )
@@ -34,11 +34,11 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 4096, 728 )
 
 [node name="cloudlayer" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -802.274, 186.508 )
+position = Vector2( -1223.33, 271.498 )
 rotation = -3.14159
 scale = Vector2( 3.58738, -1.02477 )
 texture = ExtResource( 7 )
-offset = Vector2( 0, 50 )
+offset = Vector2( -117.373, -32.937 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D"]
 script = ExtResource( 5 )
@@ -46,21 +46,66 @@ script = ExtResource( 5 )
 [node name="Player" parent="Node2D" instance=ExtResource( 1 )]
 position = Vector2( 400.818, 189.927 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+[node name="Cloud1" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 483.093, 261.294 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cloud1"]
 position = Vector2( 1, 0 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Node2D/StaticBody2D/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="Node2D/Cloud1/CollisionShape2D"]
 position = Vector2( -2.36743, -29.8683 )
 scale = Vector2( 0.37664, 0.2748 )
 texture = ExtResource( 2 )
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/StaticBody2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Cloud1"]
 visible = false
 mesh = SubResource( 2 )
+
+[node name="Cloud2" type="StaticBody2D" parent="Node2D"]
+position = Vector2( 483.093, 261.294 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cloud2"]
+position = Vector2( 453.001, -171 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Cloud2/CollisionShape2D"]
+position = Vector2( -1.36743, -38.3683 )
+scale = Vector2( 0.348515, 0.389383 )
+texture = ExtResource( 2 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Cloud2"]
+visible = false
+mesh = SubResource( 2 )
+
+[node name="Cloud3" type="StaticBody2D" parent="Node2D"]
+position = Vector2( 483.093, 261.294 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cloud3"]
+position = Vector2( 679.001, -137 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Cloud3/CollisionShape2D"]
+position = Vector2( 2.63281, -38.3683 )
+scale = Vector2( 0.348515, 0.364383 )
+texture = ExtResource( 2 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Cloud3"]
+visible = false
+mesh = SubResource( 2 )
+
+[node name="Cloud4" type="StaticBody2D" parent="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="Node2D/Cloud4"]
+position = Vector2( 1499.73, 234.594 )
+scale = Vector2( 0.603125, 0.477083 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Cloud4"]
+position = Vector2( 1510.5, 299 )
+scale = Vector2( 15.85, 2.4 )
+build_mode = 1
+polygon = PoolVector2Array( 10.1442, -0.416656, 10.018, -8.33334, 8.62998, -12.0833, 6.67415, -13.3333, 1.68993, -10.8333, -4.87159, -12.9167, -8.65708, -12.0833, -11.0546, -7.5, -12.3164, 0.833336, -10.9915, 7.50001, -8.27853, 10, -4.42995, 12.5, -1.90629, 10.8333, 1.43756, 10.4167, 4.15049, 9.58334, 5.66469, 11.6667, 7.43124, 8.75001, 9.38708, 8.33334 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 3 )

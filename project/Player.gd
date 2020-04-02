@@ -14,6 +14,8 @@ export var SPEED : float = 100
 export var PROJECTILE_SPEED : float = 250
 export var SHOOT_COOLDOWN : float = 0.35
 
+var health = 3;
+
 var state : int = DropletState.NORMAL
 var velocity : Vector2 = Vector2()
 var facingRight : bool = true
@@ -67,6 +69,7 @@ func _physics_process(delta : float) -> void:
 			
 	elif (state == DropletState.VAPOR):
 		$DroppyBody.play("vapor")
+		$DroppyBody/Face.play("default")
 		
 	else:
 		$DroppyBody.play("default")
@@ -98,6 +101,8 @@ func _physics_process(delta : float) -> void:
 		if !crouching and Input.is_action_pressed("shoot") and shootCooldown <= 0:
 			shootCooldown = SHOOT_COOLDOWN
 			
+			hit(1) #only here for testing the hit animation, will be deleted later
+			
 			#not currently working but for when shooting sound effect is added
 			#var shootEffect = get_tree().get_root().get_node("AudioStreamPlayer2D")
 			#var voiceID = shootEffect.play("bloop.wav")
@@ -124,3 +129,12 @@ func _physics_process(delta : float) -> void:
 	# Collision
 	velocity = move_and_slide_with_snap(velocity, Vector2(0, .01), Vector2(0, -1))
 	
+
+#taking damage
+func hit(damage):
+		health -= damage
+		if health <= 0:
+			pass
+		else:
+			$DroppyBody/Face.play("default") #change to "hit" face later
+			$DroppyBody/AnimationPlayer.play("hit")
