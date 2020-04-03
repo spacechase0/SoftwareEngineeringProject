@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://PauseMenu.gd" type="Script" id=1]
+
+[node name="PauseScreen" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -384.0
+margin_bottom = -240.0
+color = Color( 1, 1, 1, 0.439216 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+margin_right = 640.0
+margin_bottom = 360.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+margin_left = 285.0
+margin_top = 158.0
+margin_right = 354.0
+margin_bottom = 202.0
+
+[node name="Continue" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_right = 69.0
+margin_bottom = 20.0
+text = "Continue"
+
+[node name="Exit" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 69.0
+margin_bottom = 44.0
+text = "Exit"
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

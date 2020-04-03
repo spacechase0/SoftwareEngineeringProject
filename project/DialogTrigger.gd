@@ -14,3 +14,4 @@ func _on_Area2D_body_entered(body) -> void:
 		var canvas = get_tree().get_root().find_node("CanvasLayer", true, false)
 		var dialogContainer = canvas.find_node("DialogContainer")
 		dialogContainer.add_child(dialog)
+ 
