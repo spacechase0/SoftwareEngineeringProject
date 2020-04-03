@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://testcloud.png" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://bg2.png" type="Texture" id=8]
 [ext_resource path="res://Seagull.tscn" type="PackedScene" id=9]
 [ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=10]
+[ext_resource path="res://nimbus.png" type="Texture" id=11]
+[ext_resource path="res://cloudhouse.png" type="Texture" id=12]
 
 [sub_resource type="Curve2D" id=1]
 bake_interval = 8.0
@@ -40,10 +42,17 @@ scale = Vector2( 1.60905, -1.00249 )
 texture = ExtResource( 8 )
 offset = Vector2( -1333.07, 87.8808 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 4096, 1456 )
+region_rect = Rect2( 0, 0, 8192, 1456 )
 
 [node name="cloudlayer" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
 position = Vector2( -1223.33, 271.498 )
+rotation = -3.14159
+scale = Vector2( 3.58738, -1.02477 )
+texture = ExtResource( 7 )
+offset = Vector2( -117.373, -32.937 )
+
+[node name="cloudlayer2" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -4891.49, 271.445 )
 rotation = -3.14159
 scale = Vector2( 3.58738, -1.02477 )
 texture = ExtResource( 7 )
@@ -150,6 +159,19 @@ scale = Vector2( 11.6477, 3.89582 )
 build_mode = 1
 polygon = PoolVector2Array( 11.2941, 7.05545, 14.0866, 6.87394, 16.2114, -0.0232162, 15.665, -10.732, 12.144, -13.0915, 6.0732, -11.821, 3.82703, -12.0025, -0.847427, -12.184, -5.21837, -11.458, -9.22507, -11.458, -10.6821, -10.9135, -12.1997, -7.8279, -14.0817, -0.204716, -13.7781, 3.24386, -11.6534, 5.42191, -9.52859, 8.32598, -6.79675, 6.32943, -4.18634, 9.95951, -0.968826, 8.32598, 1.03452, 9.5965, 2.85574, 6.51093, 5.70901, 8.87048, 7.43124, 8.75001, 9.38708, 8.33334 )
 
+[node name="Cloud8" type="StaticBody2D" parent="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="Node2D/Cloud8"]
+position = Vector2( 2431.23, 186.094 )
+scale = Vector2( 0.407812, 0.429166 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Cloud8"]
+position = Vector2( 2419.13, 248.368 )
+scale = Vector2( 7.89272, 2.72993 )
+build_mode = 1
+polygon = PoolVector2Array( 11.2941, 7.05545, 14.0866, 6.87394, 16.2114, -0.0232162, 15.665, -10.732, 12.144, -13.0915, 6.0732, -11.821, 3.82703, -12.0025, -0.847427, -12.184, -5.21837, -11.458, -9.22507, -11.458, -10.6821, -10.9135, -12.1997, -7.8279, -14.0817, -0.204716, -13.7781, 3.24386, -11.6534, 5.42191, -9.52859, 8.32598, -6.79675, 6.32943, -4.18634, 9.95951, -0.968826, 8.32598, 1.03452, 9.5965, 2.85574, 6.51093, 5.70901, 8.87048, 7.43124, 8.75001, 9.38708, 8.33334 )
+
 [node name="Cloud7" type="StaticBody2D" parent="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="Node2D/Cloud7"]
@@ -162,6 +184,24 @@ position = Vector2( 1892.93, 206.756 )
 scale = Vector2( 2.96074, 0.944443 )
 build_mode = 1
 polygon = PoolVector2Array( 11.2163, -6.18001, 10.0417, -11.1109, 8.62998, -12.0833, 6.67415, -13.3333, 1.68993, -10.8333, -4.87159, -12.9167, -8.65708, -12.0833, -11.0546, -7.5, -12.3164, 0.833336, -10.9915, 7.50001, -8.27853, 10, -4.42995, 12.5, -1.90629, 10.8333, 1.43756, 10.4167, 4.15049, 9.58334, 5.66469, 11.6667, 7.43124, 8.75001, 9.38708, 8.33334 )
+
+[node name="NimbusHouse" type="StaticBody2D" parent="Node2D"]
+
+[node name="cloudhouse" type="Sprite" parent="Node2D/NimbusHouse"]
+position = Vector2( 2877.42, 159.438 )
+scale = Vector2( 0.62435, 0.604094 )
+texture = ExtResource( 12 )
+
+[node name="nimbus" type="Sprite" parent="Node2D/NimbusHouse"]
+position = Vector2( 2804.73, 146.729 )
+scale = Vector2( 0.341754, 0.294843 )
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/NimbusHouse"]
+position = Vector2( 2964.9, 10.1803 )
+scale = Vector2( 2.96074, 0.944443 )
+build_mode = 1
+polygon = PoolVector2Array( 62.9844, 31.5267, 50.0876, -10.4006, 36.7134, -28.3695, 28.1157, -35.8566, 13.3082, -49.3332, -1.97675, -46.3384, -12.9628, -47.8358, -35.4127, -22.3799, -48.787, 13.5578, -55.4742, 40.5111, -44.0104, 59.9774, -44.0104, 220.2, -61.6837, 253.143, -105.628, 260.63, -129.511, 348.977, -110.405, 387.909, -52.1306, 392.401, 3.27747, 389.406, 39.1017, 390.904, 67.761, 378.925, 75.4034, 328.013, 64.4174, 287.583, 51.5206, 263.624, 54.3866, 112.387, 50.5654, 53.9878 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 3 )

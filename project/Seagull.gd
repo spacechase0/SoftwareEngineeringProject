@@ -17,10 +17,17 @@ func _ready() -> void:
 	path_points = path.curve.get_baked_points()
 
 func _physics_process(delta) -> void:
+	($CollisionGull as CollisionPolygon2D).disabled = false
+	$CollisionGull/Gull.play("default")
+	
 	var target = path.global_position + path_points[curr_path_point]
 	while global_position.distance_to(target) < 16:
 		curr_path_point += dir
 		if curr_path_point < 0 || curr_path_point >= path_points.size():
+			if curr_path_point < 0:
+				$CollisionGull/Gull.flip_h = false
+			else:
+				$CollisionGull/Gull.flip_h = true
 			dir = -dir
 			curr_path_point += dir
 		target = path_points[curr_path_point]

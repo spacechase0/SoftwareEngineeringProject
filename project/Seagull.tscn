@@ -1,18 +1,40 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://walk1.png" type="Texture" id=1]
 [ext_resource path="res://Seagull.gd" type="Script" id=2]
+[ext_resource path="res://seagull2.png" type="Texture" id=3]
+[ext_resource path="res://seagull1.png" type="Texture" id=4]
+[ext_resource path="res://seagull4.png" type="Texture" id=5]
+[ext_resource path="res://seagull3.png" type="Texture" id=6]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
 radius = 15.5316
 
 [node name="Seagull" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
+[node name="CollisionGull" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 32.8106, -9.86367, 27.0606, -11.6137, -11.6894, -9.11367, -9.18939, -13.8637, -8.18939, -20.8637, -14.1894, -26.1137, -23.4394, -26.6137, -29.6894, -21.1137, -30.9394, -18.6137, -39.9394, -17.3637, -42.4394, -11.6137, -40.9394, -10.1137, -39.9394, -12.3637, -28.6894, -11.6137, -27.1894, -9.11367, -20.6894, -7.86367, -21.9394, 0.13633, -17.6894, 7.38633, -6.18939, 11.6363, 0.310608, 10.8863, 3.56061, 14.3863, 11.0606, 15.6363, 13.3106, 13.1363, 13.5606, 9.63633, 23.0606, 6.88633, 29.3106, 1.63633, 31.5606, -4.36367, 26.5606, -3.61367 )
+
+[node name="Gull" type="AnimatedSprite" parent="CollisionGull"]
+position = Vector2( 3.09302, -10.1583 )
+scale = Vector2( 0.372864, 0.361791 )
+frames = SubResource( 1 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+visible = false
+shape = SubResource( 2 )
 
 [node name="walk1" type="Sprite" parent="CollisionShape2D"]
+visible = false
 position = Vector2( 0.343018, 0.341675 )
 scale = Vector2( 0.372864, 0.361791 )
 texture = ExtResource( 1 )

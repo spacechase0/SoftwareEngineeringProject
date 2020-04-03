@@ -26,6 +26,11 @@ animations = [ {
 "name": "crouchmove",
 "speed": 7.0
 }, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
@@ -35,11 +40,6 @@ animations = [ {
 "loop": true,
 "name": "vapor",
 "speed": 7.5
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -55,7 +55,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=3]
 resource_name = "hit"
 length = 0.2
 tracks/0/type = "value"
@@ -71,27 +71,27 @@ tracks/0/keys = {
 "values": [ Color( 0.909804, 0.305882, 0.305882, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 11.5615
 height = 13.4393
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=5]
 height = 10.0
 
-[sub_resource type="CircleShape2D" id=5]
+[sub_resource type="CircleShape2D" id=6]
 radius = 13.8032
 
-[sub_resource type="CapsuleMesh" id=6]
+[sub_resource type="CapsuleMesh" id=7]
 radius = 10.0
 mid_height = 10.0
 
-[sub_resource type="CapsuleMesh" id=7]
+[sub_resource type="CapsuleMesh" id=8]
 radius = 5.0
 
-[sub_resource type="CapsuleMesh" id=8]
+[sub_resource type="CapsuleMesh" id=9]
 radius = 10.0
 
-[sub_resource type="PrismMesh" id=9]
+[sub_resource type="PrismMesh" id=10]
 size = Vector3( 20, -20, 2 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -110,24 +110,24 @@ frames = SubResource( 2 )
 animation = "crouch"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DroppyBody"]
-anims/hit = SubResource( 10 )
+anims/hit = SubResource( 3 )
 
 [node name="Collision_Normal" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( 0.257027, 0.51405 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Collision_Crouch" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( -0.128513, 10.9839 )
 scale = Vector2( 1, 0.5 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 disabled = true
 
 [node name="Collision_Vapor" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( 0.257027, 4.49793 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 disabled = true
 
 [node name="DisplayForms" type="Node2D" parent="."]
@@ -137,12 +137,12 @@ disabled = true
 [node name="MeshInstance2D" type="MeshInstance2D" parent="DisplayForms/Normal"]
 visible = false
 position = Vector2( 0, 5 )
-mesh = SubResource( 6 )
+mesh = SubResource( 7 )
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="DisplayForms/Normal"]
 visible = false
 position = Vector2( 0, -10 )
-mesh = SubResource( 7 )
+mesh = SubResource( 8 )
 
 [node name="Crouch" type="Node2D" parent="DisplayForms"]
 visible = false
@@ -151,7 +151,7 @@ visible = false
 visible = false
 position = Vector2( 0, 8 )
 scale = Vector2( 1, 0.75 )
-mesh = SubResource( 8 )
+mesh = SubResource( 9 )
 
 [node name="Vapor" type="Node2D" parent="DisplayForms"]
 visible = false
@@ -159,7 +159,7 @@ visible = false
 [node name="MeshInstance2D" type="MeshInstance2D" parent="DisplayForms/Vapor"]
 visible = false
 position = Vector2( 0, -3 )
-mesh = SubResource( 9 )
+mesh = SubResource( 10 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
