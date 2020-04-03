@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://testcloud.png" type="Texture" id=2]
@@ -25,6 +25,12 @@ extents = Vector2( 100, 10 )
 [sub_resource type="QuadMesh" id=3]
 size = Vector2( 200, 20 )
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 3023.23, 78.5027 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 36.416, 813.894 )
+
 [node name="Root" type="Node"]
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -36,7 +42,7 @@ scroll_offset = Vector2( 1000, 0 )
 scale = Vector2( -0.621486, 0.997517 )
 
 [node name="bg2" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -2919.98, 148.496 )
+position = Vector2( -2929.08, 6.72253 )
 rotation = -3.14159
 scale = Vector2( 1.60905, -1.00249 )
 texture = ExtResource( 8 )
@@ -55,6 +61,12 @@ offset = Vector2( -117.373, -32.937 )
 position = Vector2( -4891.49, 271.445 )
 rotation = -3.14159
 scale = Vector2( 3.58738, -1.02477 )
+texture = ExtResource( 7 )
+offset = Vector2( -117.373, -32.937 )
+
+[node name="bottom clouds" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -1797.48, 1043.02 )
+scale = Vector2( 7.18735, -1.18722 )
 texture = ExtResource( 7 )
 offset = Vector2( -117.373, -32.937 )
 
@@ -202,6 +214,23 @@ position = Vector2( 2964.9, 10.1803 )
 scale = Vector2( 2.96074, 0.944443 )
 build_mode = 1
 polygon = PoolVector2Array( 62.9844, 31.5267, 50.0876, -10.4006, 36.7134, -28.3695, 28.1157, -35.8566, 13.3082, -49.3332, -1.97675, -46.3384, -12.9628, -47.8358, -35.4127, -22.3799, -48.787, 13.5578, -55.4742, 40.5111, -44.0104, 59.9774, -44.0104, 220.2, -61.6837, 253.143, -105.628, 260.63, -129.511, 348.977, -110.405, 387.909, -52.1306, 392.401, 3.27747, 389.406, 39.1017, 390.904, 67.761, 378.925, 75.4034, 328.013, 64.4174, 287.583, 51.5206, 263.624, 54.3866, 112.387, 50.5654, 53.9878 )
+
+[node name="Borders" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Borders"]
+position = Vector2( 1566.95, -407.293 )
+shape = SubResource( 4 )
+
+[node name="BottomCollision" type="CollisionShape2D" parent="Node2D/Borders"]
+position = Vector2( 1544.32, 644.881 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Borders"]
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Borders"]
+position = Vector2( 3405.43, 11.3137 )
+shape = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 3 )

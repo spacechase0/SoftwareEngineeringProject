@@ -101,8 +101,6 @@ func _physics_process(delta : float) -> void:
 		if !crouching and Input.is_action_pressed("shoot") and shootCooldown <= 0:
 			shootCooldown = SHOOT_COOLDOWN
 			
-			hit(1) #only here for testing the hit animation, will be deleted later
-			
 			#not currently working but for when shooting sound effect is added
 			#var shootEffect = get_tree().get_root().get_node("AudioStreamPlayer2D")
 			#var voiceID = shootEffect.play("bloop.wav")
@@ -130,7 +128,7 @@ func _physics_process(delta : float) -> void:
 	velocity = move_and_slide_with_snap(velocity, Vector2(0, .01), Vector2(0, -1))
 	
 
-#taking damage
+#taking damage, not working at the moment
 func hit(damage):
 		health -= damage
 		if health <= 0:
