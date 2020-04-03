@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://testcloud.png" type="Texture" id=2]
@@ -8,6 +8,16 @@
 [ext_resource path="res://DialogTrigger.tscn" type="PackedScene" id=6]
 [ext_resource path="res://cloudlayer.png" type="Texture" id=7]
 [ext_resource path="res://bg2.png" type="Texture" id=8]
+[ext_resource path="res://Seagull.gd" type="Script" id=9]
+[ext_resource path="res://walk1.png" type="Texture" id=10]
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 653.149, 0.000915527, 0, 0, 0, 0, -69.3867, 11.7277 )
+}
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 15.5316
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 100, 10 )
@@ -26,12 +36,13 @@ scroll_offset = Vector2( 1000, 0 )
 scale = Vector2( -0.621486, 0.997517 )
 
 [node name="bg2" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -793.172, 216.551 )
+position = Vector2( -2919.98, 148.496 )
 rotation = -3.14159
 scale = Vector2( 1.60905, -1.00249 )
 texture = ExtResource( 8 )
+offset = Vector2( -1333.07, 87.8808 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 4096, 728 )
+region_rect = Rect2( 0, 0, 4096, 1456 )
 
 [node name="cloudlayer" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
 position = Vector2( -1223.33, 271.498 )
@@ -45,6 +56,27 @@ script = ExtResource( 5 )
 
 [node name="Player" parent="Node2D" instance=ExtResource( 1 )]
 position = Vector2( 400.818, 189.927 )
+
+[node name="Path2D" type="Path2D" parent="Node2D"]
+position = Vector2( 2000, 110.65 )
+scale = Vector2( 0.372864, 0.361791 )
+curve = SubResource( 3 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D"]
+position = Vector2( 653.149, 0.000915527 )
+rotation = 3.12536
+
+[node name="Seagull" type="RigidBody2D" parent="Node2D"]
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Seagull"]
+position = Vector2( 2243.24, 110.309 )
+shape = SubResource( 4 )
+
+[node name="walk1" type="Sprite" parent="Node2D/Seagull/CollisionShape2D"]
+position = Vector2( 0.343018, 0.341675 )
+scale = Vector2( 0.372864, 0.361791 )
+texture = ExtResource( 10 )
 
 [node name="Cloud1" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 483.093, 261.294 )
@@ -107,6 +139,45 @@ scale = Vector2( 15.85, 2.4 )
 build_mode = 1
 polygon = PoolVector2Array( 10.1442, -0.416656, 10.018, -8.33334, 8.62998, -12.0833, 6.67415, -13.3333, 1.68993, -10.8333, -4.87159, -12.9167, -8.65708, -12.0833, -11.0546, -7.5, -12.3164, 0.833336, -10.9915, 7.50001, -8.27853, 10, -4.42995, 12.5, -1.90629, 10.8333, 1.43756, 10.4167, 4.15049, 9.58334, 5.66469, 11.6667, 7.43124, 8.75001, 9.38708, 8.33334 )
 
+[node name="Cloud5" type="StaticBody2D" parent="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="Node2D/Cloud5"]
+position = Vector2( 1774.85, 199.594 )
+scale = Vector2( 0.28125, 0.289583 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Cloud5"]
+position = Vector2( 1776.13, 239.9 )
+scale = Vector2( 7.22378, 1.57742 )
+build_mode = 1
+polygon = PoolVector2Array( 11.2163, -6.18001, 10.0417, -11.1109, 8.62998, -12.0833, 6.67415, -13.3333, 1.68993, -10.8333, -4.87159, -12.9167, -8.65708, -12.0833, -11.0546, -7.5, -12.3164, 0.833336, -10.9915, 7.50001, -8.27853, 10, -4.42995, 12.5, -1.90629, 10.8333, 1.43756, 10.4167, 4.15049, 9.58334, 5.66469, 11.6667, 7.43124, 8.75001, 9.38708, 8.33334 )
+
+[node name="Cloud6" type="StaticBody2D" parent="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="Node2D/Cloud6"]
+position = Vector2( 2113.73, 93.594 )
+scale = Vector2( 0.590625, 0.639583 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Cloud6"]
+position = Vector2( 2096.13, 185.694 )
+scale = Vector2( 11.6477, 3.89582 )
+build_mode = 1
+polygon = PoolVector2Array( 11.2941, 7.05545, 14.0866, 6.87394, 16.2114, -0.0232162, 15.665, -10.732, 12.144, -13.0915, 6.0732, -11.821, 3.82703, -12.0025, -0.847427, -12.184, -5.21837, -11.458, -9.22507, -11.458, -10.6821, -10.9135, -12.1997, -7.8279, -14.0817, -0.204716, -13.7781, 3.24386, -11.6534, 5.42191, -9.52859, 8.32598, -6.79675, 6.32943, -4.18634, 9.95951, -0.968826, 8.32598, 1.03452, 9.5965, 2.85574, 6.51093, 5.70901, 8.87048, 7.43124, 8.75001, 9.38708, 8.33334 )
+
+[node name="Cloud7" type="StaticBody2D" parent="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="Node2D/Cloud7"]
+position = Vector2( 1893.65, 187.22 )
+scale = Vector2( 0.117731, 0.143742 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Cloud7"]
+position = Vector2( 1892.93, 206.756 )
+scale = Vector2( 2.96074, 0.944443 )
+build_mode = 1
+polygon = PoolVector2Array( 11.2163, -6.18001, 10.0417, -11.1109, 8.62998, -12.0833, 6.67415, -13.3333, 1.68993, -10.8333, -4.87159, -12.9167, -8.65708, -12.0833, -11.0546, -7.5, -12.3164, 0.833336, -10.9915, 7.50001, -8.27853, 10, -4.42995, 12.5, -1.90629, 10.8333, 1.43756, 10.4167, 4.15049, 9.58334, 5.66469, 11.6667, 7.43124, 8.75001, 9.38708, 8.33334 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 3 )
 script = ExtResource( 4 )
@@ -118,6 +189,10 @@ Entries = PoolStringArray( "You got halfway through the platform!" )
 [node name="DialogTrigger2" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 582.893, 225.474 )
 Entries = PoolStringArray( "Don\'t walk off!" )
+
+[node name="DialogTrigger3" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( 1705.07, 98.1947 )
+Entries = PoolStringArray( "Up ahead is a seagull! Press F to shoot at it!" )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
