@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://testcloud.png" type="Texture" id=2]
@@ -8,21 +8,18 @@
 [ext_resource path="res://DialogTrigger.tscn" type="PackedScene" id=6]
 [ext_resource path="res://cloudlayer.png" type="Texture" id=7]
 [ext_resource path="res://bg2.png" type="Texture" id=8]
-[ext_resource path="res://Seagull.gd" type="Script" id=9]
-[ext_resource path="res://walk1.png" type="Texture" id=10]
+[ext_resource path="res://Seagull.tscn" type="PackedScene" id=9]
 
-[sub_resource type="Curve2D" id=3]
+[sub_resource type="Curve2D" id=1]
+bake_interval = 8.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 653.149, 0.000915527, 0, 0, 0, 0, -69.3867, 11.7277 )
+"points": PoolVector2Array( 0, 0, 0, 0, 241.974, -0.748672, 0, 0, 0, 0, -36.5568, -0.118423 )
 }
 
-[sub_resource type="CircleShape2D" id=4]
-radius = 15.5316
-
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 100, 10 )
 
-[sub_resource type="QuadMesh" id=2]
+[sub_resource type="QuadMesh" id=3]
 size = Vector2( 200, 20 )
 
 [node name="Root" type="Node"]
@@ -55,35 +52,22 @@ offset = Vector2( -117.373, -32.937 )
 script = ExtResource( 5 )
 
 [node name="Player" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 400.818, 189.927 )
+position = Vector2( 1782.43, 152.837 )
 
 [node name="Path2D" type="Path2D" parent="Node2D"]
-position = Vector2( 2000, 110.65 )
-scale = Vector2( 0.372864, 0.361791 )
-curve = SubResource( 3 )
+position = Vector2( 2000, 110 )
+curve = SubResource( 1 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D"]
-position = Vector2( 653.149, 0.000915527 )
-rotation = 3.12536
-
-[node name="Seagull" type="RigidBody2D" parent="Node2D"]
-script = ExtResource( 9 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Seagull"]
-position = Vector2( 2243.24, 110.309 )
-shape = SubResource( 4 )
-
-[node name="walk1" type="Sprite" parent="Node2D/Seagull/CollisionShape2D"]
-position = Vector2( 0.343018, 0.341675 )
-scale = Vector2( 0.372864, 0.361791 )
-texture = ExtResource( 10 )
+[node name="Seagull" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 2242.53, 110 )
+follow_path = NodePath("../Path2D")
 
 [node name="Cloud1" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 483.093, 261.294 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cloud1"]
 position = Vector2( 1, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Node2D/Cloud1/CollisionShape2D"]
 position = Vector2( -2.36743, -29.8683 )
@@ -92,14 +76,14 @@ texture = ExtResource( 2 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Cloud1"]
 visible = false
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 
 [node name="Cloud2" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 483.093, 261.294 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cloud2"]
 position = Vector2( 453.001, -171 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Node2D/Cloud2/CollisionShape2D"]
 position = Vector2( -1.36743, -38.3683 )
@@ -108,14 +92,14 @@ texture = ExtResource( 2 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Cloud2"]
 visible = false
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 
 [node name="Cloud3" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 483.093, 261.294 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Cloud3"]
 position = Vector2( 679.001, -137 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Node2D/Cloud3/CollisionShape2D"]
 position = Vector2( 2.63281, -38.3683 )
@@ -124,7 +108,7 @@ texture = ExtResource( 2 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D/Cloud3"]
 visible = false
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 
 [node name="Cloud4" type="StaticBody2D" parent="Node2D"]
 
