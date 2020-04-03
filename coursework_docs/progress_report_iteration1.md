@@ -41,7 +41,7 @@ a) Progress Report: Every team member contributed to the document; however, we d
 
 b) Requirements and Design Document: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. 
 
-c) Implementation and Testing Document: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. Megan created the Use Case diagram via Creately but team members verbally came up with the use cases. Class Diagram was done by {insert team member name}
+c) Implementation and Testing Document: Every team member contributed to the document; however, we did so verbally at a meeting so most of the edits appear to only have been done by Amanda. Megan created the Use Case diagram via Creately but team members verbally came up with the use cases. Class Diagram was done by Amanda. 
 
 d) Source Code: Chase implemented code relating to the platforming and physics of the game, Carissa implmented the audio player, Amanda implemented code relating to graphics and animation, and Megan created the dialogue box and timed message system.
 
