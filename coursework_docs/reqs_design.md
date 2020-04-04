@@ -39,6 +39,7 @@ Carissa Garde <!-- HollenStarr -->
 
 # Class Diagram and/or Sequence Diagrams
 <!-- 15 points -->
+![Class Diagram](class_diagram_2.png "Class Diagram")
 <!-- This section presents a high-level overview of the anticipated system architecture using a class diagram and/or sequence diagrams. -->
 <!-- If the main paradigm used in your project is Object Oriented (i.e., you have classes or something that acts similar to classes in your system), then draw the Class Diagram of the entire system and Sequence Diagrams for the three (3) most important use cases in your system. -->
 <!-- If the main paradigm in your system is not Object Oriented (i.e., you do not have classes or anything similar to classes in your system) then only draw Sequence Diagrams, but for all the use cases of your system. In this case, we will use a modified version of Sequence Diagrams, where instead of objects, the lifelines will represent the functions in the system involved in the action sequence. -->
