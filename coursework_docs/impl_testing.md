@@ -1,5 +1,5 @@
 # Software Implementation and Testing For Group <X>
-Version 1.0
+Version 2.0
 # Authors
 Chase Warrington <!-- spacechase0 -->
 
