@@ -47,7 +47,7 @@ c) Implementation and Testing Document: Amanda and Megan both worked on the I&T 
 
 d) Source Code: Amanda added the enemy, platforms, camera, and cutscene images, Chase added the dialogue triggers, borders, and cutscene triggers, Megan coded the pause menu interface, Carissa provided a main theme music file. 
 
-e) Video: 
+e) Video: Amanda voiced and created the video.
 
 # 6)   Plans for the next increment
 <!--If this report if for the first or second increment, describe what are you planning to achieve in the next increment.-->
@@ -56,3 +56,4 @@ The primary goal for next increment will involve creating the subsequent levels 
 
 # 7)   Link to video
 <!--Paste here the link to your video (only for increment 1 and 2).-->
+https://youtu.be/eRkG4TEviPI
