@@ -9,7 +9,7 @@
 [ext_resource path="res://cloudlayer.png" type="Texture" id=7]
 [ext_resource path="res://bg2.png" type="Texture" id=8]
 [ext_resource path="res://Seagull.tscn" type="PackedScene" id=9]
-[ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UiCommon.tscn" type="PackedScene" id=10]
 [ext_resource path="res://nimbus.png" type="Texture" id=11]
 [ext_resource path="res://cloudhouse.png" type="Texture" id=12]
 [ext_resource path="res://ReloadTrigger.tscn" type="PackedScene" id=13]
@@ -263,26 +263,4 @@ SceneToTrigger = ExtResource( 14 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/SceneTrigger"]
 shape = SubResource( 6 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="DialogContainer" type="MarginContainer" parent="CanvasLayer"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -253.0
-margin_top = -149.0
-margin_right = 247.0
-margin_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="PauseScreen" parent="CanvasLayer2" instance=ExtResource( 10 )]
-visible = false
-margin_left = 108.587
-margin_top = 69.806
-margin_right = 108.587
-margin_bottom = 69.806
+[node name="UiCommon" parent="." instance=ExtResource( 10 )]
