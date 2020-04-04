@@ -1,5 +1,5 @@
 # Software Requirements and Design Document For Group <X>
-Version 1.0
+Version 2.0
 # Authors
 Chase Warrington <!-- spacechase0 -->
 
@@ -34,6 +34,7 @@ Carissa Garde <!-- HollenStarr -->
 # Use Case Diagram
 <!-- 10 points -->
  ![Usecase diagram](H2GO_Iteration_2.png "Usecase diagram")
+ The use cases go as follows: The player opens the game to a start menu that allows the user to either quit or start the game. On starting a game, it should create a background, the player character, enemy, objects.  Objects include: A music player which loops the game's theme, a pause menu interface which is only available upon hitting escape, a dialog box interface which will trigger when the player hits a certain point, a cutscene trigger which is triggered at the end of the level, and creates borders that the player can't cross to prevent asset loss or glitches. The Pause menu interface includes two buttons and a screen: the buttons will exit the Game and resume game depending on which is clicked (Exit and Continue respectively). The enemy will be created and moved on a designated walk cycle and disappear when hit by a projectile (defeat). The player character then needs to be able to be controlled by the player. The character should be able to move and crouch using the WASD keys, collide with platforms when they move to them, shapeshift between forms using "Space", shoot projectiles using "f", and be able to take damage when colliding with the enemy. 
 <!-- This section presents the use case diagram and the textual descriptions of the use cases for the system under development. The use case diagram should contain all the use cases and relationships between them needed to describe the functionality to be developed. If you discover new use cases between two increments, update the diagram for your future increments.  -->
 <!-- Textual descriptions of use cases: For the first increment, the textual descriptions for the use cases are not required. However, the textual descriptions for all use cases discovered for your system are required for the second and third iterations. -->
 
@@ -48,6 +49,7 @@ Carissa Garde <!-- HollenStarr -->
 
 # Operating Environment
 <!-- 5 points -->
+The environment the software will operate in is any desktop environment(Windows, Linux, Mac).
 <!-- Describe the environment in which the software will operate, including the hardware platform, operating system and versions, and any other software components or applications with which it must peacefully coexist. -->
 
 # Assumptions and Dependencies
