@@ -45,7 +45,7 @@ a) Progress Report: Amanda and Megan both worked on the progress report with inp
 
 b) Requirements and Design Document:  Amanda and Megan both worked on the progress report with input given by Chase
 
-c) Implementation and Testing Document: Amanda and Megan both worked on the I&T document with input given by Chase
+c) Implementation and Testing Document: Amanda and Megan both worked on the I&T document with input given by Chase, and Carissa added updates on the audio aspects as well
 
 d) Source Code: Amanda added the enemy and platforms and camera, Chase added the dialogue triggers, borders, and cutscene triggers, Megan coded the pause menu interface, Carissa provided a main theme music file. 
 
@@ -54,7 +54,7 @@ e) Video:
 # 6)   Plans for the next increment
 <!--If this report if for the first or second increment, describe what are you planning to achieve in the next increment.-->
 
-The primary goal for next increment will involve creating the subsequent levels and characters, while also polishing our current work. Functions such as damage and the overall game timer will be added as well.
+The primary goal for next increment will involve creating the subsequent levels and characters, while also polishing our current work. Functions such as damage and the overall game timer will be added as well.  Sound effects will be added for various character actions to add more depth to the game.
 
 # 7)   Link to video
 <!--Paste here the link to your video (only for increment 1 and 2).-->
