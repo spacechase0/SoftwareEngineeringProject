@@ -52,10 +52,10 @@ Testing of various visual functions have been performed:
 - Pause Menu exits game when "Exit" is pressed
 - Cutscene is triggered at the Cutscene triggers
 - Borders were added to prevent player from going out of bounds
+<!-- Describe how/if you performed non-functional testing for your project (i.e., tested for the non-functional requirements listed in your RD). -->
 Testing of audio functions has also been performed:
 - Music restarts and loops through the themes once the clip is over
 - Clips have been edited to ensure little pause between songs
-<!-- Describe how/if you performed non-functional testing for your project (i.e., tested for the non-functional requirements listed in your RD). -->
 
 # Non-Execution-based Testing
 <!-- 10 points -->
