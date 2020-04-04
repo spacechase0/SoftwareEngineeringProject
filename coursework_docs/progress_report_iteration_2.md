@@ -28,7 +28,7 @@ The first level, which serves as a tutorial level to get the user acquainted wit
 - any changes that occurred in the initial plan you had for the project or its scope. Describe the reasons for the changes. 
 - anything that went wrong during this increment-->
 
-Needless to say, the circumstances regarding COVID-19 have made completion of this project much more daunting. Between getting our personal lives in order and organizing our group under forced remote circumstances, it has unfortunately thrown our progress off track. In order to cope with this better, we have decided to scrap the idea of branching the story/level design on two distinct paths, and instead opt for one linear story path that the player progresses on. Our goal for this increment, in a very basic sense, was to have the core functionality of the game as a whole established, which was mostly accomplished. 
+Needless to say, the circumstances regarding COVID-19 have made completion of this project much more daunting. Between getting our personal lives in order and organizing our group under forced remote circumstances, it has unfortunately thrown our progress off track. In order to cope with this better, we have decided to scrap the idea of branching the story/level design on two distinct paths, and instead opt for one linear story path that the player progresses on. Our goal for this increment, in a very basic sense, was to have the core functionality of the game as a whole established, which was mostly accomplished. We were able to add a cutscene trigger and dialogue triggers, multiple platforms, an enemy, and a pause menu as well as a camera that follows the player and borders that prevent the player from going out of bounds. 
 
 <!--Note: Code will be worked on today (4/3) and what was/wasn't accomplished, or compromises will be discussed here -->
 
@@ -41,13 +41,13 @@ c)   the implementation and testing document, including the sections they wrote 
 d)   the source code (be detailed about which parts of the system each team member contributed to and how)
 e)   the video or presentation-->
 
-a) Progress Report: 
+a) Progress Report: Amanda and Megan both worked on the progress report with input given by Chase.
 
-b) Requirements and Design Document:  
+b) Requirements and Design Document:  Amanda and Megan both worked on the progress report with input given by Chase
 
-c) Implementation and Testing Document:
+c) Implementation and Testing Document: Amanda and Megan both worked on the I&T document with input given by Chase
 
-d) Source Code: 
+d) Source Code: Amanda added the enemy and platforms and camera, Chase added the dialogue triggers, borders, and cutscene triggers, Megan coded the pause menu interface, Carissa provided a main theme music file. 
 
 e) Video: 
 
