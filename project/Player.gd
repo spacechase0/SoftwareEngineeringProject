@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const Projectile = preload("res://Projectile.gd")
 const Projectile_scene = preload("res://PlayerProjectile.tscn")
-
+signal health_lost(value)
 enum DropletState {
 	NORMAL,
 	VAPOR,
@@ -136,3 +136,4 @@ func hit(damage):
 		else:
 			$DroppyBody/Face.play("default") #change to "hit" face later
 			$DroppyBody/AnimationPlayer.play("hit")
+			emit_signal("health_lost", damage)

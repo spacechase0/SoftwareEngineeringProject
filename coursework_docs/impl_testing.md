@@ -1,5 +1,5 @@
 # Software Implementation and Testing For Group <X>
-Version 1.0
+Version 2.0
 # Authors
 Chase Warrington <!-- spacechase0 -->
 
@@ -28,17 +28,34 @@ Basic character movement function has been determined and tested, namely:
 - A change in form/artwork for normal walking, crouching, and flying (aka water vapor)
 - The ability to stand on platforms without phasing through them
 - The ability to shoot projectiles, but only when in normal form
+- The ability to be injured by enemies
+Basic enemy has been determined and tested, namely:
+- A walk cycle independent of the player
+- The ability to collide with the player
+- The ability to disappear when destroyed
+A Pause menu has been determined and tested:
+- Ability to exit game
+- Ability to pause game and resume
 <!-- Describe how/if you performed functional testing for your project (i.e., tested for the functional requirements listed in your RD). -->
 
 # Execution-based Non-Functional Testing
 <!-- 10 points -->
 Testing of various visual functions have been performed:
 - The player character (Droppy's) form animations have been tested, namely crouching, walking, and vapor forms.
+- A camera follows the player character(Droppy)
 - The cloud platform have been tested and match up with the collision form underneath.
 - The seagull enemy is successfully drawn and animated, and disappears when a projectile successfully collides with it.
 - Dialogue boxes are triggered when the player reaches certain points of the stage
 - Dialogue boxes successfully close when the player hits "Enter"
+- A Pause menu has been added and triggers when player hits "ESC"
+- Pause menu resumes game when "Continue" is pressed
+- Pause Menu exits game when "Exit" is pressed
+- Cutscene is triggered at the Cutscene triggers
+- Borders were added to prevent player from going out of bounds
 <!-- Describe how/if you performed non-functional testing for your project (i.e., tested for the non-functional requirements listed in your RD). -->
+Testing of audio functions has also been performed:
+- Music restarts and loops through the themes once the clip is over
+- Clips have been edited to ensure little pause between songs
 
 # Non-Execution-based Testing
 <!-- 10 points -->

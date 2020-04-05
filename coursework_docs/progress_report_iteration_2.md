@@ -28,9 +28,7 @@ The first level, which serves as a tutorial level to get the user acquainted wit
 - any changes that occurred in the initial plan you had for the project or its scope. Describe the reasons for the changes. 
 - anything that went wrong during this increment-->
 
-Needless to say, the circumstances regarding COVID-19 have made completion of this project much more daunting. Between getting our personal lives in order and organizing our group under forced remote circumstances, it has unfortunately thrown our progress off track. In order to cope with this better, we have decided to scrap the idea of branching the story/level design on two distinct paths, and instead opt for one linear story path that the player progresses on. Our goal for this increment, in a very basic sense, was to have the core functionality of the game as a whole established, which was mostly accomplished. 
-
-<!--Note: Code will be worked on today (4/3) and what was/wasn't accomplished, or compromises will be discussed here -->
+Needless to say, the circumstances regarding COVID-19 have made completion of this project much more daunting. Between getting our personal lives in order and organizing our group under forced remote circumstances, it has unfortunately thrown our progress off track. In order to cope with this better, we have decided to scrap the idea of branching the story/level design on two distinct paths, and instead opt for one linear story path that the player progresses on. Our goal for this increment, in a very basic sense, was to have the core functionality of the game as a whole established, which was mostly accomplished. We were able to add a cutscene trigger and dialogue triggers, multiple platforms, an enemy, and a pause menu as well as a camera that follows the player and borders that prevent the player from going out of bounds. Although the tutorial level was originally going to have an NPC guide along the player, this idea was scrapped (at the very least for now) in order to deliver a complete level in time for the iteration.
 
 # 5)   Team Member Contribution for this increment
 <!--Please list each individual member and their contributions to each of the deliverables in this increment (be as detailed as possible).
@@ -41,20 +39,21 @@ c)   the implementation and testing document, including the sections they wrote 
 d)   the source code (be detailed about which parts of the system each team member contributed to and how)
 e)   the video or presentation-->
 
-a) Progress Report: 
+a) Progress Report: Amanda and Megan both worked on the progress report with input given by Chase.
 
-b) Requirements and Design Document:  
+b) Requirements and Design Document:  Amanda and Megan both worked on the progress report with input given by Chase
 
-c) Implementation and Testing Document:
+c) Implementation and Testing Document: Amanda and Megan both worked on the I&T document with input given by Chase, and Carissa added updates on the audio aspects as well
 
-d) Source Code: 
+d) Source Code: Amanda added the enemy, platforms, camera, and cutscene images, Chase added the dialogue triggers, borders, and cutscene triggers, Megan coded the pause menu interface, Carissa provided a main theme music file. 
 
-e) Video: 
+e) Video: Amanda voiced and created the video.
 
 # 6)   Plans for the next increment
 <!--If this report if for the first or second increment, describe what are you planning to achieve in the next increment.-->
 
-The primary goal for next increment will involve creating the subsequent levels and characters, while also polishing our current work. Functions such as damage and the overall game timer will be added as well.
+The primary goal for next increment will involve creating the subsequent levels and characters, while also polishing our current work. Functions such as damage and the overall game timer will be added as well.  Sound effects will be added for various character actions to add more depth to the game.
 
 # 7)   Link to video
 <!--Paste here the link to your video (only for increment 1 and 2).-->
+https://youtu.be/eRkG4TEviPI
