@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hud_heartFull.png-447446de0719a7acd26473b896f8985a.stex"
+path="res://.import/dropheartempty.png-b9fb9127f89e0a87e93a398f61fb59e2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hud_heartFull.png"
-dest_files=[ "res://.import/hud_heartFull.png-447446de0719a7acd26473b896f8985a.stex" ]
+source_file="res://dropheartempty.png"
+dest_files=[ "res://.import/dropheartempty.png-b9fb9127f89e0a87e93a398f61fb59e2.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

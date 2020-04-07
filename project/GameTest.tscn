@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://testcloud.png" type="Texture" id=2]
@@ -15,7 +15,7 @@
 [ext_resource path="res://ReloadTrigger.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Cutscene1.tscn" type="PackedScene" id=14]
 [ext_resource path="res://SceneTrigger.tscn" type="PackedScene" id=15]
-[ext_resource path="res://hud_heartFull.png" type="Texture" id=16]
+[ext_resource path="res://dropheart.png" type="Texture" id=16]
 [ext_resource path="res://Hearts.gd" type="Script" id=17]
 [ext_resource path="res://bloop.wav" type="AudioStream" id=18]
 
@@ -40,6 +40,10 @@ extents = Vector2( 36.416, 813.894 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 1, 10000 )
 
+[sub_resource type="StreamTexture" id=7]
+flags = 4
+load_path = "res://.import/dropheart.png-35a1c011c50eb1dac15f88cca55e4f42.stex"
+
 [node name="Root" type="Node"]
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -51,7 +55,7 @@ scroll_offset = Vector2( 1000, 0 )
 scale = Vector2( -0.621486, 0.997517 )
 
 [node name="bg2" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -2929.08, 6.72253 )
+position = Vector2( -2883, -18.9656 )
 rotation = -3.14159
 scale = Vector2( 1.60905, -1.00249 )
 texture = ExtResource( 8 )
@@ -60,7 +64,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 8192, 1456 )
 
 [node name="cloudlayer" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -1223.33, 271.498 )
+position = Vector2( -1223.33, 273.009 )
 rotation = -3.14159
 scale = Vector2( 3.58738, -1.02477 )
 texture = ExtResource( 7 )
@@ -299,27 +303,27 @@ margin_bottom = 69.806
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer3"]
-margin_right = 167.0
-margin_bottom = 45.0
+margin_right = 158.0
+margin_bottom = 50.0
 script = ExtResource( 17 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="1" type="TextureRect" parent="CanvasLayer3/HBoxContainer"]
-margin_right = 53.0
-margin_bottom = 45.0
+margin_right = 50.0
+margin_bottom = 50.0
 texture = ExtResource( 16 )
 
 [node name="2" type="TextureRect" parent="CanvasLayer3/HBoxContainer"]
-margin_left = 57.0
-margin_right = 110.0
-margin_bottom = 45.0
+margin_left = 54.0
+margin_right = 104.0
+margin_bottom = 50.0
 texture = ExtResource( 16 )
 
 [node name="3" type="TextureRect" parent="CanvasLayer3/HBoxContainer"]
-margin_left = 114.0
-margin_right = 167.0
-margin_bottom = 45.0
-texture = ExtResource( 16 )
+margin_left = 108.0
+margin_right = 158.0
+margin_bottom = 50.0
+texture = SubResource( 7 )
 [connection signal="health_lost" from="Node2D/Player" to="CanvasLayer3/HBoxContainer" method="_on_Player_health_lost"]
