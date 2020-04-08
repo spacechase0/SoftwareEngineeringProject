@@ -100,12 +100,7 @@ func _physics_process(delta : float) -> void:
 		# Shooting
 		if !crouching and Input.is_action_pressed("shoot") and shootCooldown <= 0:
 			shootCooldown = SHOOT_COOLDOWN
-			
-			#not currently working but for when shooting sound effect is added
-			#var shootEffect = get_tree().get_root().get_node("AudioStreamPlayer2D")
-			#var voiceID = shootEffect.play("bloop.wav")
-			#shootEffect.set_volume(voiceID, .1)
-			
+			$Shoot.play()
 			var proj : Projectile = Projectile_scene.instance()
 			proj.velocity.x = PROJECTILE_SPEED
 			if !facingRight:

@@ -1,12 +1,14 @@
 extends HBoxContainer
 
 
-var heart_full = preload("res://hud_heartFull.png")
+var heart_full = preload("res://dropheart.png")
+var heart_empty = preload("res://dropheartempty.png")
 
-func _ready():
-	visible = not visible
 
 func _on_Player_health_lost(value):
-	visible = visible
 	for i in get_child_count():
-		get_child(i).visible = value > i
+		if value > i:
+			get_child(i).texture = heart_full
+		else:
+			get_child(i).texture = heart_empty
+	
