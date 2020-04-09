@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://dropheart.png" type="Texture" id=2]
+[ext_resource path="res://Hearts.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -61,3 +63,28 @@ margin_left = 108.587
 margin_top = 69.806
 margin_right = 108.587
 margin_bottom = 69.806
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 158.0
+margin_bottom = 50.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="TextureRect" parent="HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 50.0
+texture = ExtResource( 2 )
+
+[node name="2" type="TextureRect" parent="HBoxContainer"]
+margin_left = 54.0
+margin_right = 104.0
+margin_bottom = 50.0
+texture = ExtResource( 2 )
+
+[node name="3" type="TextureRect" parent="HBoxContainer"]
+margin_left = 108.0
+margin_right = 158.0
+margin_bottom = 50.0
+texture = ExtResource( 2 )

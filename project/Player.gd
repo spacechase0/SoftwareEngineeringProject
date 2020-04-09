@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const Projectile = preload("res://Projectile.gd")
 const Projectile_scene = preload("res://PlayerProjectile.tscn")
-
+signal health_lost(value)
 enum DropletState {
 	NORMAL,
 	VAPOR,
@@ -120,12 +120,7 @@ func _physics_process(delta : float) -> void:
 		# Shooting
 		if !crouching and Input.is_action_pressed("shoot") and shootCooldown <= 0:
 			shootCooldown = SHOOT_COOLDOWN
-			
-			#not currently working but for when shooting sound effect is added
-			#var shootEffect = get_tree().get_root().get_node("AudioStreamPlayer2D")
-			#var voiceID = shootEffect.play("bloop.wav")
-			#shootEffect.set_volume(voiceID, .1)
-			
+			$Shoot.play()
 			var proj : Projectile = Projectile_scene.instance()
 			proj.velocity.x = PROJECTILE_SPEED
 			if !facingRight:
@@ -156,3 +151,4 @@ func hit(damage):
 		else:
 			$DroppyBody/Face.play("default") #change to "hit" face later
 			$DroppyBody/AnimationPlayer.play("hit")
+			emit_signal("health_lost", damage)
