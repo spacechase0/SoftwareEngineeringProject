@@ -13,8 +13,12 @@ export var JUMP_FORCE : float = 350
 export var SPEED : float = 100
 export var PROJECTILE_SPEED : float = 250
 export var SHOOT_COOLDOWN : float = 0.35
+export var VAPOR_REFILL_RATE : float = 0.2
+export var VAPOR_CONSUME_RATE : float = 0.4
+export var VAPOR_MAX : float = 100
 
-var health = 3;
+var health : int = 3
+var vapor : float = 100
 
 var state : int = DropletState.NORMAL
 var velocity : Vector2 = Vector2()
@@ -22,11 +26,27 @@ var facingRight : bool = true
 var shootCooldown : float = 0
 
 func _ready() -> void:
-	pass
+	vapor = VAPOR_MAX
+	
+func _process(delta : float) -> void:
+	var canvas = get_tree().get_root().find_node("UiCommon", true, false)
+	var vaporBar = canvas.find_node("VaporBar") as ProgressBar
+	vaporBar.value = vapor
 
 func _physics_process(delta : float) -> void:
+	var forceChangeForm = false
+	if state == DropletState.VAPOR:
+		vapor -= VAPOR_CONSUME_RATE
+		if vapor < 0:
+			vapor = 0
+			forceChangeForm = true
+	else:
+		vapor += VAPOR_REFILL_RATE
+		if ( vapor > VAPOR_MAX ):
+			vapor = VAPOR_MAX
+	
 	# Change between vapor and not
-	if Input.is_action_just_pressed("form_change"):
+	if (forceChangeForm or Input.is_action_just_pressed("form_change")):
 		if state != DropletState.VAPOR:
 			state = DropletState.VAPOR
 			($Collision_Normal as CollisionShape2D).disabled = true
