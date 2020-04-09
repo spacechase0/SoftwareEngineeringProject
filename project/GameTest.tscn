@@ -271,3 +271,4 @@ SceneToTrigger = ExtResource( 14 )
 shape = SubResource( 6 )
 
 [node name="UiCommon" parent="." instance=ExtResource( 10 )]
+[connection signal="health_lost" from="Node2D/Player" to="UiCommon" method="_on_Player_health_lost"]
