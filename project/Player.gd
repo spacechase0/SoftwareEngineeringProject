@@ -146,9 +146,13 @@ func _physics_process(delta : float) -> void:
 #taking damage, not working at the moment
 func hit(damage):
 		health -= damage
-		if health <= 0:
-			pass
+		if health < 0:
+			health = 0
 		else:
 			$DroppyBody/Face.play("default") #change to "hit" face later
 			$DroppyBody/AnimationPlayer.play("hit")
 			emit_signal("health_lost", damage)
+
+
+func _on_Seagull_damage(damage):
+	hit(damage)

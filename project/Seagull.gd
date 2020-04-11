@@ -2,10 +2,12 @@ extends KinematicBody2D
 
 export var speed : float = 100
 export var follow_path : NodePath
-
+signal damage
 const Projectile = preload("res://Projectile.gd")
 
 var velocity : Vector2 = Vector2.ZERO
+
+export (int) var damage_given = 1
 
 var path : Path2D
 var path_points
@@ -43,3 +45,5 @@ func _physics_process(delta) -> void:
 			if proj.FRIENDLY:
 				self.queue_free()
 				proj.queue_free()
+		if coll.collider is KinematicBody2D:
+			emit_signal("damage", damage_given)
