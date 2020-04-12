@@ -16,17 +16,20 @@ export var SHOOT_COOLDOWN : float = 0.35
 export var VAPOR_REFILL_RATE : float = 0.2
 export var VAPOR_CONSUME_RATE : float = 0.4
 export var VAPOR_MAX : float = 100
-
-var health : int = 3
+var max_health = 3
 var vapor : float = 100
 
 var state : int = DropletState.NORMAL
 var velocity : Vector2 = Vector2()
 var facingRight : bool = true
 var shootCooldown : float = 0
+onready var invulnerability_timer = $Invulnerability
+onready var is_invulnerable = false
+onready var health = max_health setget _set_health
 
 func _ready() -> void:
 	vapor = VAPOR_MAX
+	invulnerability_timer.stop()
 	
 func _process(delta : float) -> void:
 	var canvas = get_tree().get_root().find_node("UiCommon", true, false)
@@ -145,14 +148,27 @@ func _physics_process(delta : float) -> void:
 
 #taking damage, not working at the moment
 func hit(damage):
-		health -= damage
-		if health < 0:
-			health = 0
-		else:
-			$DroppyBody/Face.play("default") #change to "hit" face later
-			$DroppyBody/AnimationPlayer.play("hit")
-			emit_signal("health_lost", damage)
+	if invulnerability_timer.is_stopped() and is_invulnerable == false:
+		invulnerability_timer.start()
+		_set_health(health - damage)
+		$DroppyBody/Face.play("default") #change to "hit" face later
+		$DroppyBody/AnimationPlayer.play("hit")
+		is_invulnerable = true
 
+func _set_health(value):
+	var prev_health = health
+	health = clamp(value, 0, max_health)
+	if health != prev_health:
+		emit_signal("health_lost", health)
+		if health == 0:
+			print("dead")
 
 func _on_Seagull_damage(damage):
-	hit(damage)
+	if is_invulnerable == false:
+		hit(damage)
+
+
+func _on_Invulnerability_timeout():
+	is_invulnerable = false
+	invulnerability_timer.stop()
+	
