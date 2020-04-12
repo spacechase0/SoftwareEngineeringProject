@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UiCommon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+
+[node name="Level2" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Player" parent="Node2D" instance=ExtResource( 2 )]
+position = Vector2( 430.221, 205.051 )
+
+[node name="UiCommon" parent="." instance=ExtResource( 1 )]

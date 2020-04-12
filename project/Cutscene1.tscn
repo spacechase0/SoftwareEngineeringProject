@@ -35,3 +35,4 @@ text = "Hey look! A cutscene!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="animation_finished" from="CanvasLayer/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
