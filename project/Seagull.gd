@@ -3,6 +3,7 @@ extends KinematicBody2D
 export var speed : float = 100
 export var follow_path : NodePath
 signal damage
+const Player = preload("res://Player.gd")
 const Projectile = preload("res://Projectile.gd")
 
 var velocity : Vector2 = Vector2.ZERO
@@ -45,5 +46,5 @@ func _physics_process(delta) -> void:
 			if proj.FRIENDLY:
 				self.queue_free()
 				proj.queue_free()
-		if coll.collider is KinematicBody2D:
+		if coll.collider is Player:
 			emit_signal("damage", damage_given)
