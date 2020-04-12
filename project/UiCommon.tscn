@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://PauseScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://dropheart.png" type="Texture" id=2]
 [ext_resource path="res://Hearts.gd" type="Script" id=3]
+[ext_resource path="res://UiCommon.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -30,6 +31,7 @@ ProgressBar/styles/bg = SubResource( 1 )
 ProgressBar/styles/fg = SubResource( 2 )
 
 [node name="UiCommon" type="CanvasLayer"]
+script = ExtResource( 4 )
 
 [node name="DialogContainer" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -65,6 +67,8 @@ margin_right = 108.587
 margin_bottom = 69.806
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 5.0
+margin_top = 35.0
 margin_right = 158.0
 margin_bottom = 50.0
 script = ExtResource( 3 )
