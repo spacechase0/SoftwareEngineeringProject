@@ -4,7 +4,7 @@ export var speed : float = 100
 export var follow_path : NodePath
 signal damage
 const Player = preload("res://Player.gd")
-const Projectile = preload("res://Projectile.gd")
+#const Projectile = preload("res://Projectile.gd")
 
 var velocity : Vector2 = Vector2.ZERO
 
@@ -14,6 +14,9 @@ var path : Path2D
 var path_points
 var curr_path_point : int = 0
 var dir : int = 1
+
+func get_class():
+	return "Seagull"
 
 func _ready() -> void:
 	path = get_node(follow_path) as Path2D
@@ -41,10 +44,5 @@ func _physics_process(delta) -> void:
 	var coll = move_and_collide(velocity * delta)
 	if coll:
 		velocity = velocity.slide(coll.normal)
-		if coll.collider is Projectile:
-			var proj = coll.collider as Projectile
-			if proj.FRIENDLY:
-				self.queue_free()
-				proj.queue_free()
 		if coll.collider is Player:
 			emit_signal("damage", damage_given)
