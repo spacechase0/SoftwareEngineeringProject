@@ -12,17 +12,16 @@ export var GRAVITY: float = 25
 export var JUMP_FORCE : float = 350
 export var SPEED : float = 100
 export var PROJECTILE_SPEED : float = 250
-export var SHOOT_COOLDOWN : float = 0.35
 export var VAPOR_REFILL_RATE : float = 0.2
 export var VAPOR_CONSUME_RATE : float = 0.4
 export var VAPOR_MAX : float = 100
+export var VAPOR_PROJECTILE_COST : float = 15
 var max_health = 3
 var vapor : float = 100
 
 var state : int = DropletState.NORMAL
 var velocity : Vector2 = Vector2()
 var facingRight : bool = true
-var shootCooldown : float = 0
 onready var invulnerability_timer = $Invulnerability
 onready var is_invulnerable = false
 onready var health = max_health setget _set_health
@@ -100,9 +99,6 @@ func _physics_process(delta : float) -> void:
 	else:
 		$DroppyBody.play("default")
 	
-	if shootCooldown > 0:
-		shootCooldown -= delta
-	
 	# State-specific
 	
 	if state == DropletState.NORMAL:
@@ -124,8 +120,8 @@ func _physics_process(delta : float) -> void:
 		($DisplayForms/Crouch as Node2D).visible = crouching
 		
 		# Shooting
-		if !crouching and Input.is_action_pressed("shoot") and shootCooldown <= 0:
-			shootCooldown = SHOOT_COOLDOWN
+		if !crouching and Input.is_action_just_pressed("shoot") and vapor >= VAPOR_PROJECTILE_COST:
+			vapor -= VAPOR_PROJECTILE_COST
 			$Shoot.play()
 			var proj : Projectile = Projectile_scene.instance()
 			proj.velocity.x = PROJECTILE_SPEED
