@@ -81,6 +81,7 @@ offset = Vector2( -117.373, -32.937 )
 position = Vector2( 416.244, 193.599 )
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="Node2D/Player"]
+visible = false
 stream = ExtResource( 18 )
 bus = "Shoot"
 

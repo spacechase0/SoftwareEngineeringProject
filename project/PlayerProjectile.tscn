@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Projectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://droplet.png" type="Texture" id=2]
 
 [node name="Projectile" instance=ExtResource( 1 )]
 collision_layer = 4
 collision_mask = 5
 FRIENDLY = true
+
+[node name="MeshInstance2D" parent="." index="0"]
+visible = false
+
+[node name="droplet" type="Sprite" parent="." index="2"]
+position = Vector2( 0.0694847, -0.0674438 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 2 )
