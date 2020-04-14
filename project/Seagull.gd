@@ -25,7 +25,7 @@ func _physics_process(delta) -> void:
 	
 	var target = path.global_position + path_points[curr_path_point]
 	while global_position.distance_to(target) < 16:
-		$Flap.play()
+		#$CollisionGull/Gull/Flap.play()
 			
 		curr_path_point += dir
 		if curr_path_point < 0 || curr_path_point >= path_points.size():
