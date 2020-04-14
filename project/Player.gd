@@ -145,7 +145,7 @@ func _physics_process(delta : float) -> void:
 	velocity = move_and_slide_with_snap(velocity, Vector2(0, .01), Vector2(0, -1))
 	
 
-#taking damage, not working at the moment
+#taking damage
 func hit(damage):
 	if invulnerability_timer.is_stopped() and is_invulnerable == false:
 		invulnerability_timer.start()
@@ -161,6 +161,7 @@ func _set_health(value):
 		emit_signal("health_lost", health)
 		if health == 0:
 			print("dead")
+			get_tree().reload_current_scene()
 
 func _on_Seagull_damage(damage):
 	if is_invulnerable == false:
