@@ -86,6 +86,9 @@ func _physics_process(delta : float) -> void:
 		if (crouching):
 			$DroppyBody/Face.play("crouch")
 			$DroppyBody.play("crouchmove")
+		elif !Input.is_action_pressed("move_right") && !Input.is_action_pressed("move_left"):
+			$DroppyBody.play("default")
+			$DroppyBody/Face.play("default")
 		else: 
 			$DroppyBody/Face.play("default")
 			$DroppyBody.play("walk")
