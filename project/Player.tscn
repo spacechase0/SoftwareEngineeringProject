@@ -168,3 +168,4 @@ mesh = SubResource( 10 )
 
 [node name="Invulnerability" type="Timer" parent="."]
 wait_time = 0.5
+[connection signal="timeout" from="Invulnerability" to="." method="_on_Invulnerability_timeout"]
