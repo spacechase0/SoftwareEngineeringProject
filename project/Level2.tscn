@@ -75,6 +75,9 @@ wait_time = 0.5
 [node name="Shoot" type="AudioStreamPlayer2D" parent="Node2D/Player"]
 stream = ExtResource( 6 )
 
+[node name="Camera2D2" type="Camera2D" parent="Node2D/Player"]
+current = true
+
 [node name="Borders" type="StaticBody2D" parent="Node2D"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Borders"]
@@ -94,3 +97,4 @@ position = Vector2( 241.174, 177.866 )
 Entries = PoolStringArray( "Hey, who are you\?", "Droppy, huh\? Nice to meet you! My name is Twiggy!", "What do you mean you came from the sky\? Nobody lives there! You\'re crazy.", "Well, I don\'t know anything about that. But..I do know someone who does.", "You should go see Old Knotty! He\'s down at that village: The Hamlet of Knots!", "He could probably clear up this whole \"came from the sky\" thing.", "Good luck finding him!" )
 
 [node name="UiCommon" parent="." instance=ExtResource( 1 )]
+[connection signal="health_lost" from="Node2D/Player" to="UiCommon" method="_on_Player_health_lost"]

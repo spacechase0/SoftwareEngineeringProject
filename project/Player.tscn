@@ -22,25 +22,25 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "crouchmove",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
+"name": "vapor",
+"speed": 7.5
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "vapor",
-"speed": 7.5
+"name": "crouch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "crouchmove",
+"speed": 7.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -56,7 +56,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -71,7 +71,7 @@ tracks/0/keys = {
 "values": [ Color( 0.909804, 0.305882, 0.305882, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 11.5615
 height = 13.4393
 
@@ -110,19 +110,16 @@ frames = SubResource( 2 )
 animation = "crouch"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DroppyBody"]
-anims/hit = SubResource( 4 )
+anims/hit = SubResource( 3 )
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="DroppyBody"]
 stream = ExtResource( 14 )
-
-[node name="Invulnerability" type="Timer" parent="DroppyBody"]
-wait_time = 0.5
 
 [node name="Collision_Normal" type="CollisionShape2D" parent="."]
 visible = false
 modulate = Color( 0.909804, 0.305882, 0.305882, 1 )
 position = Vector2( 0.257027, 0.51405 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Collision_Crouch" type="CollisionShape2D" parent="."]
 visible = false
@@ -169,5 +166,5 @@ visible = false
 position = Vector2( 0, -3 )
 mesh = SubResource( 10 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
+[node name="Invulnerability" type="Timer" parent="."]
+wait_time = 0.5

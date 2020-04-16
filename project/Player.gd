@@ -143,7 +143,10 @@ func _physics_process(delta : float) -> void:
 	
 	# Collision
 	velocity = move_and_slide_with_snap(velocity, Vector2(0, .01), Vector2(0, -1))
-	
+	for i in range(0, get_slide_count()):
+		var coll = get_slide_collision(i)
+		if coll.collider.get_class() == "FlowerVine":
+			hit(1)
 
 #taking damage
 func hit(damage):

@@ -18,3 +18,7 @@ func _ready():
 
 func _on_Player_health_lost(value):
 	$HBoxContainer._on_Player_health_lost(value)
+
+
+func _on_FlowerBoss_health_lost(percent):
+	($FlowerHealth as ProgressBar).value = percent
