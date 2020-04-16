@@ -246,20 +246,17 @@ script = ExtResource( 4 )
 
 [node name="DialogTrigger" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 413.449, 236.228 )
-Entries = PoolStringArray( "Welcome To H2Go! Use the WASD keys to move!" )
 
 [node name="DialogTrigger2" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 546.24, 223.845 )
-Entries = PoolStringArray( "Don\'t walk off the platform! Hit spacebar to turn into vapor. Then move to the next platform!" )
 
 [node name="DialogTrigger3" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 1513.26, 205.664 )
-Entries = PoolStringArray( "Up ahead is a seagull! Press F to shoot at it!" )
 
 [node name="ReloadTrigger" parent="Node2D" instance=ExtResource( 13 )]
 
 [node name="BottomCollision" type="CollisionShape2D" parent="Node2D/ReloadTrigger"]
-position = Vector2( 1544.32, 642.231 )
+position = Vector2( 1525.9, 644.687 )
 shape = SubResource( 4 )
 
 [node name="SceneTrigger" parent="Node2D" instance=ExtResource( 15 )]

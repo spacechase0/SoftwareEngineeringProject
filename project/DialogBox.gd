@@ -1,7 +1,7 @@
 extends RichTextLabel
 
 
-var dialog = ["Hey! This is a dialog box! In H2Go, this will help you figure out the story and any tutorials!", "These are an integral part to platforming games with dialogue!"]
+var dialog = []
 var page = 0
 
 # Called when the node enters the scene tree for the first time.
@@ -9,6 +9,7 @@ func _ready():
 	set_bbcode(dialog[page])
 	set_visible_characters(0)
 	set_process_input(true)
+	#get_tree().get_root().set_disable_input(true)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -23,6 +24,7 @@ func _input(event):
 					set_visible_characters(0)
 				else:
 					get_parent().queue_free()
+				#	get_tree().get_root().set_disable_input(false)
 			else:
 				set_visible_characters(get_total_character_count())
 

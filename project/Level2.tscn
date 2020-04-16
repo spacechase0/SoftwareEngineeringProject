@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://UiCommon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://bloop.wav" type="AudioStream" id=6]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=7]
 [ext_resource path="res://AdventureTheme.tres" type="AudioStream" id=8]
+[ext_resource path="res://DialogTrigger.tscn" type="PackedScene" id=9]
+[ext_resource path="res://twiggy.png" type="Texture" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 17.8747
@@ -28,7 +30,7 @@ extents = Vector2( 1563.68, 203.971 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/ParallaxBackground"]
 
 [node name="bg3" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 619.555, -229.503 )
+position = Vector2( 619.74, -235.795 )
 scale = Vector2( 2.94178, 1.86044 )
 texture = ExtResource( 4 )
 
@@ -38,13 +40,18 @@ scale = Vector2( 2.94178, 1.86044 )
 texture = ExtResource( 4 )
 
 [node name="trees" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 218.796, -11.6383 )
+position = Vector2( 224.07, -16.9125 )
 texture = ExtResource( 5 )
 
 [node name="trees2" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
 position = Vector2( 1782.92, -11.6383 )
 texture = ExtResource( 5 )
 flip_h = true
+
+[node name="twiggy" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 309.885, 249 )
+scale = Vector2( 0.339067, 0.449148 )
+texture = ExtResource( 10 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 position = Vector2( 430.221, 205.051 )
@@ -75,11 +82,15 @@ position = Vector2( -395.98, -240.416 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Borders"]
-position = Vector2( 967.322, 514.774 )
+position = Vector2( 968.829, 514.774 )
 shape = SubResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 8 )
 script = ExtResource( 7 )
+
+[node name="DialogTrigger" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 241.174, 177.866 )
+Entries = PoolStringArray( "Hey, who are you\?", "Droppy, huh\? Nice to meet you! My name is Twiggy!", "What do you mean you came from the sky\? Nobody lives there! You\'re crazy.", "Well, I don\'t know anything about that. But..I do know someone who does.", "You should go see Old Knotty! He\'s down at that village: The Hamlet of Knots!", "He could probably clear up this whole \"came from the sky\" thing.", "Good luck finding him!" )
 
 [node name="UiCommon" parent="." instance=ExtResource( 1 )]
