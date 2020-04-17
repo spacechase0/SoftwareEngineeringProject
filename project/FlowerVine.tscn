@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://FlowerVine.gd" type="Script" id=1]
+[ext_resource path="res://vinetip.png" type="Texture" id=2]
+[ext_resource path="res://vine1.png" type="Texture" id=3]
+[ext_resource path="res://vine3.png" type="Texture" id=4]
+[ext_resource path="res://vine2.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 100 )
@@ -8,7 +12,15 @@ extents = Vector2( 10, 100 )
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 20, 10, 2 )
 
-[sub_resource type="CubeMesh" id=3]
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CubeMesh" id=4]
 size = Vector3( 20, 200, 2 )
 
 [node name="FlowerVine" type="KinematicBody2D"]
@@ -21,13 +33,25 @@ disabled = true
 
 [node name="DisplaySprout" type="Node2D" parent="."]
 
+[node name="vinetip" type="Sprite" parent="DisplaySprout"]
+position = Vector2( 6.75001, -20.75 )
+scale = Vector2( 0.4075, 0.32197 )
+texture = ExtResource( 2 )
+
 [node name="MeshInstance2D" type="MeshInstance2D" parent="DisplaySprout"]
+visible = false
 position = Vector2( 0, -5 )
 mesh = SubResource( 2 )
 
 [node name="DisplayFull" type="Node2D" parent="."]
 visible = false
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="DisplayFull"]
+position = Vector2( 3, -103.75 )
+scale = Vector2( 0.288, 0.276667 )
+frames = SubResource( 3 )
+
 [node name="MeshInstance2D" type="MeshInstance2D" parent="DisplayFull"]
+visible = false
 position = Vector2( 0, -100 )
-mesh = SubResource( 3 )
+mesh = SubResource( 4 )
