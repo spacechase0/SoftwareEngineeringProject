@@ -79,6 +79,9 @@ wait_time = 0.5
 [node name="Shoot" type="AudioStreamPlayer2D" parent="Node2D/Player"]
 stream = ExtResource( 6 )
 
+[node name="Camera2D" type="Camera2D" parent="Node2D/Player"]
+current = true
+
 [node name="Borders" type="StaticBody2D" parent="Node2D"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Borders"]
