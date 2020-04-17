@@ -87,6 +87,9 @@ bus = "Shoot"
 [node name="Invulnerability" type="Timer" parent="Node2D/Player"]
 wait_time = 0.5
 
+[node name="Camera2D" type="Camera2D" parent="Node2D/Player"]
+current = true
+
 [node name="Path2D" type="Path2D" parent="Node2D"]
 position = Vector2( 2000, 110 )
 curve = SubResource( 1 )
@@ -246,12 +249,15 @@ script = ExtResource( 4 )
 
 [node name="DialogTrigger" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 413.449, 236.228 )
+Entries = PoolStringArray( "Welcome to H2Go! Use the WASD keys to move!" )
 
 [node name="DialogTrigger2" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 546.24, 223.845 )
+Entries = PoolStringArray( "Don\'t walk off the platform! Hit spacebar to turn into vapor. Then move to the next platform!" )
 
 [node name="DialogTrigger3" parent="Node2D" instance=ExtResource( 6 )]
 position = Vector2( 1513.26, 205.664 )
+Entries = PoolStringArray( "Up ahead is a seagull! Press F to shoot at it!" )
 
 [node name="ReloadTrigger" parent="Node2D" instance=ExtResource( 13 )]
 
@@ -268,5 +274,4 @@ shape = SubResource( 6 )
 
 [node name="UiCommon" parent="." instance=ExtResource( 10 )]
 [connection signal="health_lost" from="Node2D/Player" to="UiCommon" method="_on_Player_health_lost"]
-[connection signal="timeout" from="Node2D/Player/Invulnerability" to="Node2D/Player" method="_on_Invulnerability_timeout"]
 [connection signal="damage" from="Node2D/Seagull" to="Node2D/Player" method="_on_Seagull_damage"]
