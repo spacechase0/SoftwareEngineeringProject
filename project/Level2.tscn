@@ -7,7 +7,7 @@
 [ext_resource path="res://trees.png" type="Texture" id=5]
 [ext_resource path="res://bloop.wav" type="AudioStream" id=6]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=7]
-[ext_resource path="res://AdventureTheme.tres" type="AudioStream" id=8]
+[ext_resource path="res://level2.wav" type="AudioStream" id=8]
 [ext_resource path="res://DialogTrigger.tscn" type="PackedScene" id=9]
 [ext_resource path="res://twiggy.png" type="Texture" id=10]
 
@@ -90,6 +90,7 @@ shape = SubResource( 3 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 8 )
+bus = "Theme 2"
 script = ExtResource( 7 )
 
 [node name="DialogTrigger" parent="Node2D" instance=ExtResource( 9 )]
