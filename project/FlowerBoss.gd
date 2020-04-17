@@ -38,3 +38,4 @@ func hit(dmg : int) -> void:
 		emit_signal("health_lost", health / float(MAX_HEALTH))
 		if health <= 0:
 			self.queue_free()
+			#get_tree().change_scene_to()
