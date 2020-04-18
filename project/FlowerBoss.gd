@@ -7,12 +7,12 @@ extends KinematicBody2D
 
 export var VINE_TIMER = 7
 export var MAX_HEALTH = 25
+export var ScenetoTrigger : PackedScene = preload("res://Cutscene1.tscn")
 
 var health : int = MAX_HEALTH
 var vine_timer : float = VINE_TIMER
 
 const FlowerVine_Scene = preload("res://FlowerVine.tscn")
-
 signal health_lost(percent)
 
 func get_class():
@@ -38,4 +38,4 @@ func hit(dmg : int) -> void:
 		emit_signal("health_lost", health / float(MAX_HEALTH))
 		if health <= 0:
 			self.queue_free()
-			#get_tree().change_scene_to()
+			get_tree().change_scene_to(ScenetoTrigger)

@@ -24,6 +24,7 @@ extents = Vector2( 203.21, 551.868 )
 extents = Vector2( 1563.68, 203.971 )
 
 [sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 8.46704, 10 )
 
 [node name="Level2" type="Node"]
 
@@ -34,7 +35,7 @@ extents = Vector2( 1563.68, 203.971 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/ParallaxBackground"]
 
 [node name="bg3" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 619.74, -235.795 )
+position = Vector2( 619.74, -239.22 )
 scale = Vector2( 2.94178, 1.86044 )
 texture = ExtResource( 4 )
 
@@ -106,6 +107,7 @@ position = Vector2( 4397.41, -6.84938 )
 SceneToTrigger = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/SceneTrigger"]
+position = Vector2( -1979.52, 297.955 )
 shape = SubResource( 4 )
 
 [node name="UiCommon" parent="." instance=ExtResource( 1 )]
