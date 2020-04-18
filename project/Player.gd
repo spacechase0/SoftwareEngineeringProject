@@ -26,6 +26,9 @@ onready var invulnerability_timer = $Invulnerability
 onready var is_invulnerable = false
 onready var health = max_health setget _set_health
 
+func get_class():
+	return "Player"
+
 func _ready() -> void:
 	vapor = VAPOR_MAX
 	invulnerability_timer.stop()

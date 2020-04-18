@@ -18,7 +18,8 @@ func _physics_process(_delta : float) -> void:
 				coll.collider.queue_free()
 			elif coll.collider.get_class() == "FlowerBoss" and FRIENDLY:
 				coll.collider.hit(1)
-#			elif coll.collider is Player and not FRIENDLY:
-#				var player = coll.collider as Player
-#				player.hit(1)
+			elif coll.collider.get_class() == "CloudBoss" and FRIENDLY:
+				coll.collider.hit(1)
+			elif coll.collider.get_class() == "Player" and not FRIENDLY:
+				coll.collider.hit(1)
 		self.queue_free()
