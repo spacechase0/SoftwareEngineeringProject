@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://UiCommon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -12,19 +12,25 @@
 [ext_resource path="res://twiggy.png" type="Texture" id=10]
 [ext_resource path="res://SceneTrigger.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Level2_Boss.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Worm.tscn" type="PackedScene" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 17.8747
+radius = 16.9497
 height = 256.726
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 203.21, 551.868 )
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array(  )
+}
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 1563.68, 203.971 )
+extents = Vector2( 203.21, 551.868 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 8.46704, 10 )
+extents = Vector2( 1563.68, 203.971 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 37.6743, 857.52 )
 
 [node name="Level2" type="Node"]
 
@@ -35,7 +41,7 @@ extents = Vector2( 8.46704, 10 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/ParallaxBackground"]
 
 [node name="bg3" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 619.74, -239.22 )
+position = Vector2( 619.74, -240.22 )
 scale = Vector2( 2.94178, 1.86044 )
 texture = ExtResource( 4 )
 
@@ -62,17 +68,32 @@ texture = ExtResource( 10 )
 position = Vector2( 430.221, 205.051 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
-position = Vector2( 289, -93 )
+position = Vector2( 277, -62.9999 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="grassplatform" type="Sprite" parent="Node2D/StaticBody2D/CollisionShape2D"]
-position = Vector2( -11.1253, 0.689514 )
+position = Vector2( -11.1253, 2.68951 )
 rotation = -1.5708
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D"]
+position = Vector2( 430.221, 205.051 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2"]
+position = Vector2( 593.001, -5.99982 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="grassplatform" type="Sprite" parent="Node2D/StaticBody2D2/CollisionShape2D"]
+position = Vector2( -8.60474, -0.00939941 )
+rotation = -1.5708
+scale = Vector2( 0.964856, 0.904762 )
 texture = ExtResource( 3 )
 
 [node name="Player" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 241.221, 172.051 )
+SPEED = 1000.0
 
 [node name="Invulnerability" type="Timer" parent="Node2D/Player"]
 wait_time = 0.5
@@ -83,15 +104,24 @@ stream = ExtResource( 6 )
 [node name="Camera2D" type="Camera2D" parent="Node2D/Player"]
 current = true
 
+[node name="Worm" parent="Node2D" instance=ExtResource( 13 )]
+position = Vector2( 1152, 287.001 )
+scale = Vector2( 0.5, 0.5 )
+follow_path = NodePath("../Path2D")
+
+[node name="Path2D" type="Path2D" parent="Node2D"]
+position = Vector2( 1152, 287 )
+curve = SubResource( 2 )
+
 [node name="Borders" type="StaticBody2D" parent="Node2D"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Borders"]
 position = Vector2( -395.98, -240.416 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Borders"]
 position = Vector2( 968.829, 514.774 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node2D"]
 stream = ExtResource( 8 )
@@ -102,12 +132,11 @@ script = ExtResource( 7 )
 position = Vector2( 241.174, 177.866 )
 Entries = PoolStringArray( "Hey, who are you\?", "Droppy, huh\? Nice to meet you! My name is Twiggy!", "What do you mean you came from the sky\? Nobody lives there! You\'re crazy.", "Well, I don\'t know anything about that. But..I do know someone who does.", "You should go see Old Knotty! He\'s down at that village: The Hamlet of Knots!", "He could probably clear up this whole \"came from the sky\" thing.", "Good luck finding him!" )
 
-[node name="SceneTrigger" parent="Node2D" instance=ExtResource( 11 )]
-position = Vector2( 4397.41, -6.84938 )
+[node name="SceneTrigger" parent="." instance=ExtResource( 11 )]
 SceneToTrigger = ExtResource( 12 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/SceneTrigger"]
-position = Vector2( -1979.52, 297.955 )
-shape = SubResource( 4 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
+position = Vector2( 400, 0 )
+shape = SubResource( 5 )
 
 [node name="UiCommon" parent="." instance=ExtResource( 1 )]
