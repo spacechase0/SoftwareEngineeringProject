@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://testcloud.png" type="Texture" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UiCommon.tscn" type="PackedScene" id=3]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=4]
 [ext_resource path="res://AdventureTheme.tres" type="AudioStream" id=5]
-[ext_resource path="res://samplebg.png" type="Texture" id=6]
 [ext_resource path="res://bloop.wav" type="AudioStream" id=7]
 [ext_resource path="res://CloudBoss.tscn" type="PackedScene" id=8]
+[ext_resource path="res://bg4.png" type="Texture" id=9]
+[ext_resource path="res://cloudlayer.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 203.21, 551.868 )
@@ -15,31 +16,31 @@ extents = Vector2( 203.21, 551.868 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1563.68, 203.971 )
 
-[sub_resource type="Curve2D" id=6]
+[sub_resource type="Curve2D" id=3]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -1.48224, -109.067, 0, 0, 0, 0, -1.48224, 38.9321 )
 }
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0.0625, 0.25, 1 )
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 0.25, 1, 1 )
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="Theme" id=5]
+[sub_resource type="Theme" id=6]
 ProgressBar/colors/font_color = Color( 0.94, 0.94, 0.94, 1 )
 ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
 ProgressBar/fonts/font = null
-ProgressBar/styles/bg = SubResource( 3 )
-ProgressBar/styles/fg = SubResource( 4 )
+ProgressBar/styles/bg = SubResource( 4 )
+ProgressBar/styles/fg = SubResource( 5 )
 
 [node name="Level2" type="Node"]
 
@@ -49,10 +50,16 @@ ProgressBar/styles/fg = SubResource( 4 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/ParallaxBackground"]
 
-[node name="bg3" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1059.64, 341.911 )
-scale = Vector2( 2.94178, 1.86044 )
-texture = ExtResource( 6 )
+[node name="bg4" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1306.96, 132.003 )
+scale = Vector2( 3.73175, 2.40918 )
+texture = ExtResource( 9 )
+
+[node name="cloudlayer" type="Sprite" parent="Node2D/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.792157, 0.792157, 0.811765, 1 )
+position = Vector2( 358.027, 161.702 )
+scale = Vector2( 1.4447, 0.867417 )
+texture = ExtResource( 10 )
 
 [node name="Player" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( -105.319, 249.971 )
@@ -96,7 +103,7 @@ FOLLOW_PATH = NodePath("../BossFollowPath")
 
 [node name="BossFollowPath" type="Path2D" parent="Node2D"]
 position = Vector2( 704.481, 230.067 )
-curve = SubResource( 6 )
+curve = SubResource( 3 )
 
 [node name="UiCommon" parent="." instance=ExtResource( 3 )]
 
@@ -108,7 +115,7 @@ margin_top = 3.32983
 margin_right = -5.0
 margin_bottom = 28.3298
 rect_min_size = Vector2( 250, 25 )
-theme = SubResource( 5 )
+theme = SubResource( 6 )
 max_value = 1.0
 value = 1.0
 percent_visible = false

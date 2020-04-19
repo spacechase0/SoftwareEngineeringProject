@@ -93,7 +93,7 @@ texture = ExtResource( 3 )
 
 [node name="Player" parent="Node2D" instance=ExtResource( 2 )]
 position = Vector2( 241.221, 172.051 )
-SPEED = 1000.0
+SPEED = 100.0
 
 [node name="Invulnerability" type="Timer" parent="Node2D/Player"]
 wait_time = 0.5
@@ -136,7 +136,7 @@ Entries = PoolStringArray( "Hey, who are you\?", "Droppy, huh\? Nice to meet you
 SceneToTrigger = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
-position = Vector2( 400, 0 )
+position = Vector2( 2329, -45.2551 )
 shape = SubResource( 5 )
 
 [node name="UiCommon" parent="." instance=ExtResource( 1 )]
