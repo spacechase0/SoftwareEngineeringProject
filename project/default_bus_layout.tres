@@ -1,15 +1,12 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=2]
-
-[sub_resource type="AudioEffectAmplify" id=1]
-resource_name = "Amplify"
+[gd_resource type="AudioBusLayout" format=2]
 
 [resource]
-bus/0/volume_db = -0.328256
+bus/0/volume_db = 6.02
 bus/1/name = "Theme"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -6.25101
+bus/1/volume_db = -13.5162
 bus/1/send = "Master"
 bus/2/name = "Flap"
 bus/2/solo = false
@@ -17,17 +14,45 @@ bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 6.02
 bus/2/send = "Master"
-bus/2/effect/0/effect = SubResource( 1 )
-bus/2/effect/0/enabled = true
 bus/3/name = "Shoot"
 bus/3/solo = false
 bus/3/mute = false
 bus/3/bypass_fx = false
-bus/3/volume_db = 0.0
+bus/3/volume_db = -8.00903
 bus/3/send = "Master"
 bus/4/name = "Theme 2"
 bus/4/solo = false
 bus/4/mute = false
 bus/4/bypass_fx = false
-bus/4/volume_db = -27.4604
+bus/4/volume_db = -24.9389
 bus/4/send = "Master"
+bus/5/name = "Jump"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = -7.63485
+bus/5/send = "Master"
+bus/6/name = "Damage"
+bus/6/solo = false
+bus/6/mute = false
+bus/6/bypass_fx = false
+bus/6/volume_db = -5.04224
+bus/6/send = "Master"
+bus/7/name = "Defeat"
+bus/7/solo = false
+bus/7/mute = false
+bus/7/bypass_fx = false
+bus/7/volume_db = 0.0
+bus/7/send = "Master"
+bus/8/name = "Forest"
+bus/8/solo = false
+bus/8/mute = false
+bus/8/bypass_fx = false
+bus/8/volume_db = -2.91905
+bus/8/send = "Master"
+bus/9/name = "Boss Battle"
+bus/9/solo = false
+bus/9/mute = false
+bus/9/bypass_fx = false
+bus/9/volume_db = -2.91905
+bus/9/send = "Master"

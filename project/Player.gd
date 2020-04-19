@@ -115,6 +115,7 @@ func _physics_process(delta : float) -> void:
 		# Gravity, jumping
 		velocity.y += GRAVITY
 		if is_on_floor() and Input.is_action_just_pressed("move_up"):
+			$Jump.play()
 			velocity.y = -JUMP_FORCE
 			
 		($Collision_Normal as CollisionShape2D).disabled = crouching
@@ -158,6 +159,7 @@ func hit(damage):
 		_set_health(health - damage)
 		$DroppyBody/Face.play("default") #change to "hit" face later
 		$DroppyBody/AnimationPlayer.play("hit")
+		$Damage.play()
 		is_invulnerable = true
 
 func _set_health(value):

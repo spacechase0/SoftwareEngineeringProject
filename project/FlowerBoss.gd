@@ -32,5 +32,6 @@ func hit(dmg : int) -> void:
 		health -= dmg
 		emit_signal("health_lost", health / float(MAX_HEALTH))
 		if health <= 0:
+			$Defeat.play()
 			self.queue_free()
 			get_tree().change_scene_to(ScenetoTrigger)

@@ -1,15 +1,13 @@
 extends AudioStreamPlayer
 
 #current melodies
-var adventureTheme2
+var bossTheme
 
 
 func _ready():
 	set_process(true)
-	adventureTheme2 = self.get_stream()
+	bossTheme = self.get_stream()
 	self.play()
-	if !self.playing:
-		self.play()
 
 #currently this just alternates between two of the melodies to demonstrate them
 #func _process(delta):
