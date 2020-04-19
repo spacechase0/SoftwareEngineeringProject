@@ -21,4 +21,8 @@ func _on_Player_health_lost(value):
 
 
 func _on_FlowerBoss_health_lost(percent):
-	($FlowerHealth as ProgressBar).value = percent
+	($BossHealth as ProgressBar).value = percent
+
+
+func _on_CloudBoss_health_lost(percent):
+	($BossHealth as ProgressBar).value = percent
