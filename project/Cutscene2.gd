@@ -5,10 +5,11 @@ extends Node
 # var a = 2
 # var b = "text"
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CanvasLayer/AnimatedSprite.play("default");
-	$AudioStreamPlayer2D.play();
+	$AudioStreamPlayer.play()
 	#test
 	pass # Replace with function body.
 

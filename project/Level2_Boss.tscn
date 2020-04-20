@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UiCommon.tscn" type="PackedScene" id=3]
 [ext_resource path="res://FlowerBoss.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Cutscene2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://bloop.wav" type="AudioStream" id=6]
 [ext_resource path="res://jump.wav" type="AudioStream" id=7]
 [ext_resource path="res://trees.png" type="Texture" id=8]
@@ -109,7 +108,6 @@ current = true
 
 [node name="FlowerBoss" parent="Node2D" instance=ExtResource( 4 )]
 position = Vector2( 797.658, 272.721 )
-ScenetoTrigger = ExtResource( 5 )
 
 [node name="LeftVineBorder" type="Node2D" parent="Node2D/FlowerBoss"]
 position = Vector2( -963.427, 37.9196 )

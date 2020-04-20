@@ -21,20 +21,20 @@ height = 463.861
 radius = 51.9712
 height = 497.393
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 54.9031
 height = 475.207
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 125.21, 2064.66 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 2788.07, 10 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 378.251, 1776.16 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 3133.14, 10 )
 
 [node name="Node" type="Node"]
@@ -126,7 +126,7 @@ texture = ExtResource( 2 )
 position = Vector2( 3281.41, -529.038 )
 rotation = 1.5708
 scale = Vector2( 1.43333, 1.3125 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="cloud4" type="Sprite" parent="Cloud4"]
 modulate = Color( 0.45098, 0.470588, 0.501961, 1 )
@@ -138,23 +138,23 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
 position = Vector2( -328.097, 243.245 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
 position = Vector2( 1781.91, -1023.89 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="SceneTrigger" parent="." instance=ExtResource( 8 )]
 SceneToTrigger = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
 position = Vector2( 4095.56, -260.215 )
-shape = SubResource( 7 )
+shape = SubResource( 6 )
 
 [node name="ReloadTrigger" parent="." instance=ExtResource( 7 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ReloadTrigger"]
 position = Vector2( 2093.04, 1402.9 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="UiCommon" parent="." instance=ExtResource( 6 )]

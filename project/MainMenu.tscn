@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://title.png" type="Texture" id=2]
+[ext_resource path="res://bg2.png" type="Texture" id=3]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -10,6 +11,11 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="bg2" type="Sprite" parent="."]
+position = Vector2( 518.5, 322 )
+scale = Vector2( 1.1127, 0.926909 )
+texture = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 518.5, 151 )
