@@ -4,7 +4,7 @@
 [ext_resource path="res://dizzyflower.png" type="Texture" id=2]
 [ext_resource path="res://darkforest.png" type="Texture" id=3]
 [ext_resource path="res://Cutscene2.gd" type="Script" id=4]
-[ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=5]
+[ext_resource path="res://AudioStreamPlayer2D.gd" type="Script" id=5]
 [ext_resource path="res://forest.ogg" type="AudioStream" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -27,7 +27,6 @@ position = Vector2( 512.999, 267.999 )
 scale = Vector2( 0.820313, 0.679688 )
 frames = SubResource( 1 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
-bus = "Forest"
 script = ExtResource( 5 )

@@ -157,7 +157,8 @@ func hit(damage):
 	if invulnerability_timer.is_stopped() and is_invulnerable == false:
 		invulnerability_timer.start()
 		_set_health(health - damage)
-		$DroppyBody/Face.play("default") #change to "hit" face later
+		$DroppyBody/Face.play("hit") #change to "hit" face later
+		$DroppyBody.play("default")
 		$DroppyBody/AnimationPlayer.play("hit")
 		$Damage.play()
 		is_invulnerable = true

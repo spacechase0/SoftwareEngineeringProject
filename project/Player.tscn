@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://walk1.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://vapor1.png" type="Texture" id=12]
 [ext_resource path="res://vapor2.png" type="Texture" id=13]
 [ext_resource path="res://bloop.wav" type="AudioStream" id=14]
+[ext_resource path="res://hurtface.png" type="Texture" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -32,15 +33,15 @@ animations = [ {
 "name": "walk",
 "speed": 7.5
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "crouch",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "crouchmove",
 "speed": 7.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "crouch",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]
@@ -48,6 +49,11 @@ animations = [ {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "hit",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
@@ -107,7 +113,7 @@ animation = "crouch"
 
 [node name="Face" type="AnimatedSprite" parent="DroppyBody"]
 frames = SubResource( 2 )
-animation = "crouch"
+animation = "hit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DroppyBody"]
 anims/hit = SubResource( 3 )
