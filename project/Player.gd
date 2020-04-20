@@ -181,3 +181,8 @@ func _on_Invulnerability_timeout():
 	is_invulnerable = false
 	invulnerability_timer.stop()
 	
+
+
+func _on_Worm_damage(damage):
+	if is_invulnerable == false:
+		hit(damage)
