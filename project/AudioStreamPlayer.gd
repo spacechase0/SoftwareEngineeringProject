@@ -1,10 +1,10 @@
 extends AudioStreamPlayer
 
 #current melody
-var thirdtheme
+var menu
 
 
 func _ready():
 	set_process(true)
-	thirdtheme = self.get_stream()
+	menu = self.get_stream()
 	self.play()
