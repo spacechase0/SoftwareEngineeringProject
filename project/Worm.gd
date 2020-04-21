@@ -26,23 +26,23 @@ func _physics_process(delta) -> void:
 	($CollisionWorm as CollisionPolygon2D).disabled = false
 	$CollisionWorm/Worm.play("default")
 	
-#	var target = path.global_position + path_points[curr_path_point]
-#	while global_position.distance_to(target) < 16:
-#		#$CollisionGull/Gull/Flap.play()
-#			
-#		curr_path_point += dir
-#		if curr_path_point < 0 || curr_path_point >= path_points.size():
-#			if curr_path_point < 0:
-#				$CollisionWorm/Worm.flip_h = false
-#			else:
-#				$CollisionWorm/Worm.flip_h = true
-#			dir = -dir
-#			curr_path_point += dir
-#		target = path_points[curr_path_point]
-#	
-#	velocity = (target - position).normalized() * speed
-#	var coll = move_and_collide(velocity * delta)
-#	if coll:
-#		velocity = velocity.slide(coll.normal)
-#		if coll.collider is Player:
-#			emit_signal("damage", damage_given)
+	var target = path.global_position + path_points[curr_path_point]
+	while global_position.distance_to(target) < 16:
+		#$CollisionGull/Gull/Flap.play()
+			
+		curr_path_point += dir
+		if curr_path_point < 0 || curr_path_point >= path_points.size():
+			if curr_path_point < 0:
+				$CollisionWorm/Worm.flip_h = false
+			else:
+				$CollisionWorm/Worm.flip_h = true
+			dir = -dir
+			curr_path_point += dir
+		target = path_points[curr_path_point]
+	
+	velocity = (target - position).normalized() * speed
+	var coll = move_and_collide(velocity * delta)
+	if coll:
+		velocity = velocity.slide(coll.normal)
+		if coll.collider is Player:
+			emit_signal("damage", damage_given)

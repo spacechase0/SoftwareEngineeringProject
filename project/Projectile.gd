@@ -16,6 +16,8 @@ func _physics_process(_delta : float) -> void:
 			var coll = get_slide_collision(i)
 			if coll.collider.get_class() == "Seagull" and FRIENDLY:
 				coll.collider.queue_free()
+			if coll.collider.get_class() == "Worm" and FRIENDLY:
+				coll.collider.queue_free()
 			elif coll.collider.get_class() == "FlowerBoss" and FRIENDLY:
 				coll.collider.hit(1)
 			elif coll.collider.get_class() == "CloudBoss" and FRIENDLY:

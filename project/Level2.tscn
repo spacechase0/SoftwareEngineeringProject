@@ -22,7 +22,7 @@ height = 256.726
 
 [sub_resource type="Curve2D" id=2]
 _data = {
-"points": PoolVector2Array(  )
+"points": PoolVector2Array( 0, 0, 0, 0, -611.636, -0.373047, 0, 0, 0, 0, 54.9065, -3.30933 )
 }
 
 [sub_resource type="RectangleShape2D" id=3]
