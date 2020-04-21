@@ -150,4 +150,5 @@ position = Vector2( 2329, -45.2551 )
 shape = SubResource( 5 )
 
 [node name="UiCommon" parent="." instance=ExtResource( 1 )]
+[connection signal="health_lost" from="Node2D/Player" to="UiCommon" method="_on_Player_health_lost"]
 [connection signal="damage" from="Node2D/Worm" to="Node2D/Player" method="_on_Worm_damage"]
