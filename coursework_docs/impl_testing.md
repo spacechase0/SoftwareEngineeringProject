@@ -1,5 +1,5 @@
 # Software Implementation and Testing For Group <X>
-Version 2.0
+Version 3.0 (WIP)
 # Authors
 Chase Warrington <!-- spacechase0 -->
 
@@ -29,10 +29,15 @@ Basic character movement function has been determined and tested, namely:
 - The ability to stand on platforms without phasing through them
 - The ability to shoot projectiles, but only when in normal form
 - The ability to be injured by enemies
+- Sound effects have been added for certain functions such as jumping and shooting projectiles. 
 Basic enemy has been determined and tested, namely:
 - A walk cycle independent of the player
 - The ability to collide with the player
-- The ability to disappear when destroyed
+- The ability to disappear when defeated
+Boss characteristics have been determined and tested, namely:
+- The ability to attack the player in one of two different manners
+- Implementation of a health bar that decreases with every projectile that hits it
+- Implementation of a particular cutscene upon boss defeat
 A Pause menu has been determined and tested:
 - Ability to exit game
 - Ability to pause game and resume
@@ -44,7 +49,7 @@ Testing of various visual functions have been performed:
 - The player character (Droppy's) form animations have been tested, namely crouching, walking, and vapor forms.
 - A camera follows the player character(Droppy)
 - The cloud platform have been tested and match up with the collision form underneath.
-- The seagull enemy is successfully drawn and animated, and disappears when a projectile successfully collides with it.
+- The seagull and worm enemies are successfully drawn and animated, and disappear when a projectile successfully collides with it.
 - Boss battles have been implemented, namely the Flower boss and the final boss of Mr. Nimbus
 - Hurt animations and a health bar has been implemented
 - Health bar for enemies has been implemented
@@ -60,9 +65,10 @@ Testing of various visual functions have been performed:
 <!-- Describe how/if you performed non-functional testing for your project (i.e., tested for the non-functional requirements listed in your RD). -->
 Testing of audio functions has also been performed:
 - Music restarts and loops through the themes once the clip is over
-- Clips have been edited to ensure little pause between songs
+- Clips have been edited to ensure small pause between songs
 
 # Non-Execution-based Testing
 <!-- 10 points -->
 Components such as art, story, character design, and music have all been presented to every member of the group, and changes have been made where necessary. Code has been uploaded and shared through Git, and those working on the code have partaken in reviews to ensure functionality.
+For Iteration 3, we had increased the frequency in which we met, which meant we more frquently bounced ideas off one another and suggested certain means of going about implementing ideas. Any comments, criticisms, or concerns are discussed at the meeting, and compromises and/or solutions are made if and when necessary.
 <!-- Describe how/if you performed non-execution-based testing (such as code reviews/inspections/walkthroughs). -->
