@@ -45,12 +45,17 @@ Testing of various visual functions have been performed:
 - A camera follows the player character(Droppy)
 - The cloud platform have been tested and match up with the collision form underneath.
 - The seagull enemy is successfully drawn and animated, and disappears when a projectile successfully collides with it.
+- Boss battles have been implemented, namely the Flower boss and the final boss of Mr. Nimbus
+- Hurt animations and a health bar has been implemented
+- Health bar for enemies has been implemented
+- A vapor bar that measures both player attack and vapor form has been implemented
 - Dialogue boxes are triggered when the player reaches certain points of the stage
 - Dialogue boxes successfully close when the player hits "Enter"
 - A Pause menu has been added and triggers when player hits "ESC"
 - Pause menu resumes game when "Continue" is pressed
 - Pause Menu exits game when "Exit" is pressed
 - Cutscene is triggered at the Cutscene triggers
+- Cutscenes transition to next level or scene upon completion
 - Borders were added to prevent player from going out of bounds
 <!-- Describe how/if you performed non-functional testing for your project (i.e., tested for the non-functional requirements listed in your RD). -->
 Testing of audio functions has also been performed:
