@@ -23,7 +23,7 @@ Carissa Garde <!-- HollenStarr -->
 5) Implementation of boss characters. (Priority: Medium-High)
 6) Interactivity with characters that prompt text boxes (Priority: Medium)
 
-~~7) Saving current progress of the player through the game (Priority: Medium-Low)~~ No longer included in implementation. Game in its 
+~~7. Saving current progress of the player through the game (Priority: Medium-Low)~~ No longer included in implementation. Game in its 
 entirety can be completed in ~10 minutes, therefore saving the game is redundant.
 
 8) Implementing hurt animations when hit(Priority: Low)
