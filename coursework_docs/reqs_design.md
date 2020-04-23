@@ -22,8 +22,10 @@ Carissa Garde <!-- HollenStarr -->
 4) Implementation of enemy characters. (Priority: Medium-High)
 5) Implementation of boss characters. (Priority: Medium-High)
 6) Interactivity with characters that prompt text boxes (Priority: Medium)
+
 ~~7) Saving current progress of the player through the game (Priority: Medium-Low)~~ No longer included in implementation. Game in its 
 entirety can be completed in ~10 minutes, therefore saving the game is redundant.
+
 8) Implementing hurt animations when hit(Priority: Low)
 9) Implementation of a main menu and pause menu. (Priority: Low)
 <!-- List the functional requirements in sentences identified by numbers and for each requirement state if it is of high, medium, or low priority. Each functional requirement is something that the system shall do. Include all the details required such that there can be no misinterpretations of the requirements when read. Be very specific about what the system needs to do (not how, just what). You may provide a brief design rationale for any requirement which you feel requires explanation for how and/or why the requirement was derived. -->
