@@ -21,13 +21,16 @@ Carissa Garde <!-- HollenStarr -->
 3) Ability to shoot projectiles (beads of water). (Priority: Medium-High)
 4) Implementation of enemy characters. (Priority: Medium-High)
 5) Implementation of boss characters. (Priority: Medium-High)
-6) Interactivity with characters that prompt text boxes (Priority: Medium)
+6) Implementation of cutscenes that, upon finishing, lead to other scenes in the game (Priority: Medium-High)
+7) Implementation of triggers, either on levels or on boss defeat that lead to cutscenes (Priority: Medium)
+8) Interactivity with characters that prompt text boxes (Priority: Medium)
+9) Implementation of game boundaries that prevent the player from going out of bounds (Priority: Medium-Low)
 
-~~7. Saving current progress of the player through the game (Priority: Medium-Low)~~ No longer included in implementation. Game in its 
+~~10. Saving current progress of the player through the game (Priority: Medium-Low)~~ No longer included in implementation. Game in its 
 entirety can be completed in ~10 minutes, therefore saving the game is redundant.
 
-8) Implementing hurt animations when hit(Priority: Low)
-9) Implementation of a main menu and pause menu. (Priority: Low)
+11) Implementing hurt animations when hit(Priority: Low)
+12) Implementation of a main menu and pause menu. (Priority: Low)
 <!-- List the functional requirements in sentences identified by numbers and for each requirement state if it is of high, medium, or low priority. Each functional requirement is something that the system shall do. Include all the details required such that there can be no misinterpretations of the requirements when read. Be very specific about what the system needs to do (not how, just what). You may provide a brief design rationale for any requirement which you feel requires explanation for how and/or why the requirement was derived. -->
 
 # Non-functional Requirements
