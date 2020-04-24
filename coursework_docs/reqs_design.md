@@ -38,7 +38,7 @@ entirety can be completed in ~10 minutes, therefore saving the game is redundant
 1) Story: Gives the player a scenario to follow along, provides context for the adventures the main character goes on.
 2) Art: A variety of different digital drawings that add to the visual appeal of the game.
    (Subset: Animation - add more "life" and variety to the game by creating moving pictures)
-3) Music: Audio to keep the player engaged. Different audio pieces will match for different scenes throughout the game.  
+3) Music: Audio to keep the player engaged. Different audio pieces will match for different scenes throughout the game.  Sound effects for player activities and cutscenes will enhance the auditory appeal of the game.  
 <!-- List the non-functional requirements of the system (any requirement referring to a property of the system, such as security, safety, software quality, performance, reliability, etc.) You may provide a brief rationale for any requirement which you feel requires explanation as to how and/or why the requirement was derived. -->
 
 # Use Case Diagram
