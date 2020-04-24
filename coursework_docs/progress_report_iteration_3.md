@@ -15,7 +15,7 @@ Carissa Garde - cmg17d - beesbuzzingby
 
 # 2)   Project Title and Description
 <!--Briefly describe your project.-->
-H2GO is a 2D platforming game made for Windows. The game follows a water droplet called Droppy, who traverses through a variety of terrains in order to save his home. In doing so, Droppy will use his powers to travel the land and fight enemies. An eclectic cast of characters, unique soundtracks, and worlds filled with visual variety help tell his story and engross the player in his adventure. 
+H2GO is a 2D platforming game made for Windows, Mac, and Linux. The game follows a water droplet called Droppy, who traverses through a variety of terrains in order to save his home. In doing so, Droppy will use his powers to travel the land and fight enemies. An eclectic cast of characters, unique soundtracks, and worlds filled with visual variety help tell his story and engross the player in his adventure. 
 
 # 3)  Accomplishments and overall project status during this increment
 <!--Describe in detail what was accomplished during this increment and where your project stands overall compared to the initial scope and functionality proposed.-->
@@ -27,7 +27,7 @@ A significant amount of progress was made between the second iteration and the t
 - any changes that occurred in the initial plan you had for the project or its scope. Describe the reasons for the changes. 
 - anything that went wrong during this increment-->
 
-Compared to last iteration, our communication had greatly improved, along with our ability to complete goals and objectives in a more timely manner. We had successfully established our group in a remote setting, and after doing so, we found that work was getting completed at a much better rate. Tasks were being delegated much more efficiently, and we accomplished more as a result. The most significant change we made in terms of scope and the project as a whole was simplifying the story; limiting the number of character interactions and dialog options, and telling the story mostly through still images rather than direct player interactivity. We decided to do this to ensure that we could finish the project on time, given that everyone's situations are very fluid and consistency for work and partner communication could be questionable. This is less of anyone's fault in particular and more of the situation we were put in.
+Compared to last iteration, our communication had greatly improved, along with our ability to complete goals and objectives in a more timely manner. We had successfully established our group in a remote setting, and after doing so, we found that work was getting completed at a much better rate. Tasks were being delegated much more efficiently, and we accomplished more as a result. The most significant change we made in terms of scope and the project as a whole was simplifying the story; limiting the number of character interactions and dialog options, and telling the story mostly through still images rather than direct player interactivity. We decided to do this to ensure that we could finish the project on time, given that everyone's situations are very fluid and consistency for work and partner communication could change at any time. This is less of anyone's fault in particular and more of the situation we were put in.
 
 # 5)   Team Member Contribution for this increment
 <!--Please list each individual member and their contributions to each of the deliverables in this increment (be as detailed as possible).
