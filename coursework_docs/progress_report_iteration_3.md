@@ -42,9 +42,9 @@ a) Progress Report: Amanda created the progress report, with references to the p
 
 b) Requirements and Design Document: Work done on the written portion of the requirements and design document was done by Megan and Amanda. Megan has created the Use Case Diagram, while Chase has created Class/Sequence Diagram.
 
-c) Implementation and Testing Document: Work done on the document this increment were created by Megan and Amanda.
+c) Implementation and Testing Document: Work done on the document this increment were created by Megan and Amanda, with a few additions by Carissa.
 
-d) Source Code: Amanda created and implemented the graphics for Level 2 and Level 3, as well as designed the previously mentioned levels. Megan implemented the damage system, with work on the health display done by Amanda and work on the hurt animation done by Chase. Chase implemented the mechanics for the two boss fights, and provided additional code to various other elements in the game (ex. enemy pathfinding, vapor bar improvements). Carissa implemented music and soundtrack for the game as well as fixed minor errors in the code where necessary.
+d) Source Code: Amanda created and implemented the graphics for Level 2 and Level 3, as well as designed the previously mentioned levels. Megan implemented the damage system, with work on the health display done by Amanda and work on the hurt animation done by Chase. Chase implemented the mechanics for the two boss fights, and provided additional code to various other elements in the game (ex. enemy pathfinding, vapor bar improvements). Carissa implemented the music soundtrack and sound effects for the game as well as fixed minor errors in the code where necessary.
 
 e) Video: TBD
 
