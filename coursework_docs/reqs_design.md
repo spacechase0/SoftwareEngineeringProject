@@ -1,5 +1,5 @@
 # Software Requirements and Design Document For Group <X>
-Version 3.0 (WIP)
+Version 3.0
 # Authors
 Chase Warrington <!-- spacechase0 -->
 
@@ -56,8 +56,6 @@ The use cases go as follows: The player opens the game to a start menu that allo
 <!-- If the main paradigm in your system is not Object Oriented (i.e., you do not have classes or anything similar to classes in your system) then only draw Sequence Diagrams, but for all the use cases of your system. In this case, we will use a modified version of Sequence Diagrams, where instead of objects, the lifelines will represent the functions in the system involved in the action sequence. -->
 <!-- Class Diagrams show the fundamental objects/classes that must be modeled with the system to satisfy its requirements and the relationships between them. Each class rectangle on the diagram must also include the attributes and the methods of the class (they can be refined between increments).  All the relationships between classes and their multiplicity must be shown on the class diagram. -->
 <!-- A Sequence Diagram simply depicts interaction between objects (or functions - in our case - for non-OOP systems) in a sequential order, i.e. the order in which these interactions take place. Sequence diagrams describe how and in what order the objects in a system function. -->
-
-Note: Class diagram to be updated
 
 # Operating Environment
 <!-- 5 points -->
