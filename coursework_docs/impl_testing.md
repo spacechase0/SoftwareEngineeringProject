@@ -17,7 +17,8 @@ GDScript - Godot's in-house scripting language, using due to ease of access and 
 # Platforms, APIs, Databases, and other technologies used
 <!-- 5 points -->
 * Godot Engine - programming, implementation of all other elements into one software 
-* Sibelius, Audacity - music and sound design
+* Sibelius, Audacity - original music soundtracks for level and boss themes
+* Freesound.org - sound effects and background noises
 * Paint Tool SAI - artwork
 * Github - writing/storyboarding 
 <!-- List all the platforms, APIs, Databases, and any other technologies you use in your project and where you use them (in what components of your project). -->
@@ -64,11 +65,15 @@ Testing of various visual functions have been performed:
 - Borders were added to prevent player from going out of bounds
 <!-- Describe how/if you performed non-functional testing for your project (i.e., tested for the non-functional requirements listed in your RD). -->
 Testing of audio functions has also been performed:
-- Music restarts and loops through the themes once the clip is over
+- Music restarts and loops through a different original theme for each level
 - Clips have been edited to ensure small pause between songs
+- Music changes when boss appears
+- Sound is aligned with the changing images of the first cutscene
+- Sound effects play when the player jumps, shoots, and is hit
+- Audio buses are added to ensure each sound plays at appropriate volume
 
 # Non-Execution-based Testing
 <!-- 10 points -->
 Components such as art, story, character design, and music have all been presented to every member of the group, and changes have been made where necessary. Code has been uploaded and shared through Git, and those working on the code have partaken in reviews to ensure functionality.
-For Iteration 3, we had increased the frequency in which we met, which meant we more frquently bounced ideas off one another and suggested certain means of going about implementing ideas. Any comments, criticisms, or concerns are discussed at the meeting, and compromises and/or solutions are made if and when necessary.
+For Iteration 3, we had increased the frequency in which we met, which meant we more frequently bounced ideas off one another and suggested certain means of going about implementing ideas. Any comments, criticisms, or concerns are discussed at the meeting, and compromises and/or solutions are made if and when necessary.
 <!-- Describe how/if you performed non-execution-based testing (such as code reviews/inspections/walkthroughs). -->
