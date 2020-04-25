@@ -38,15 +38,15 @@ c)   the implementation and testing document, including the sections they wrote 
 d)   the source code (be detailed about which parts of the system each team member contributed to and how)
 e)   the video or presentation-->
 
-a) Progress Report: Amanda created the progress report, with references to the previously created progress reports (created by all members).
+a) Progress Report: Amanda created the progress report, with references to the previously created progress reports (created by all members). Review of the document was performed and approved by all members.
 
 b) Requirements and Design Document: Work done on the written portion of the requirements and design document was done by Megan and Amanda. Megan has created the Use Case Diagram, while Chase has created Class/Sequence Diagram.
 
-c) Implementation and Testing Document: Work done on the document this increment were created by Megan and Amanda, with a few additions by Carissa.
+c) Implementation and Testing Document: Work done on the document this increment were created by Megan and Amanda, with a few additions by Carissa and a review done by Chase.
 
 d) Source Code: Amanda created and implemented the graphics for Level 2 and Level 3, as well as designed the previously mentioned levels. Megan implemented the damage system, with work on the health display done by Amanda and work on the hurt animation done by Chase. Chase implemented the mechanics for the two boss fights, and provided additional code to various other elements in the game (ex. enemy pathfinding, vapor bar improvements). Carissa implemented the music soundtrack and sound effects for the game as well as fixed minor errors in the code where necessary.
 
-e) Video: TBD
+e) Video: Amanda created an initial script/outline for the video, and Megan did the voice over. Amanda created the video. The audio and video both were reviewed and edited as necessary by Chase and Carissa. 
 
 # 6)   Plans for the next increment
 <!--If this report if for the first or second increment, describe what are you planning to achieve in the next increment.-->
@@ -54,4 +54,4 @@ N/A
 
 # 7)   Link to video
 <!--Paste here the link to your video (only for increment 1 and 2).-->
-**POST VIDEO HERE**
+https://youtu.be/WBEeDp-ts9U
